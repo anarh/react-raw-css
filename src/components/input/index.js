@@ -19,7 +19,9 @@ class Input extends Component {
 
   componentDidMount () {
     if (this.props.defaultValue) {
-      this.setState({focused: true});
+      this.setState({
+        focused: true
+      });
     }
   }
 
@@ -31,17 +33,13 @@ class Input extends Component {
 
   handleFocus (e) {
     e.preventDefault();
-    this.setState({focused: true});
+    this.setState({
+      focused: true
+    });
   }
 
   handleBlur (e) {
     e.preventDefault();
-    // if (e.target.value) {
-    //   this.setState({focused: true});
-    // } else {
-    //   this.setState({focused: false});
-    // }
-
     this.setValidity();
     this.props.onBlur(e);
   }
@@ -49,13 +47,10 @@ class Input extends Component {
   handleChange (e) {
     e.preventDefault();
 
-    this.setState({value: e.target.value});
-
-    // if (e.target.value) {
-    //   this.setState({filled: true});
-    // } else {
-    //   this.setState({filled: false});
-    // }
+    this.setState({
+      value: e.target.value,
+      filled: !!e.target.value
+    });
 
     if (!this.state.valid) {
       this.setValidity();
@@ -66,11 +61,6 @@ class Input extends Component {
 
   setValidity () {
     const input = this.input;
-
-    // input.oninvalid = function (e) {
-    //   e.preventDefault();
-    //   // console.log('hide default browser tooltip');
-    // };
 
     if (this.state.focused &&
         (!input.checkValidity() ||
@@ -112,12 +102,6 @@ class Input extends Component {
       defaultValue
     } = this.props;
 
-    let errorTitle = null;
-
-    if (title) {
-      errorTitle = <small className={`is-alert-message ${this.state.valid ? 'is-success' : 'is-error'}`} role='alert' aria-atomic='true'>{title}</small>;
-    }
-
     return <div
       className={`${className}`}
       onChange={this.handleChange}
@@ -148,13 +132,19 @@ class Input extends Component {
         id={id}
         ref={(input) => { this.input = input; }}
       />
-      {errorTitle}
+      {title &&
+        <small
+          className={`is-alert-message ${this.state.valid ? 'is-success' : 'is-error'}`}
+          role='alert'
+          aria-atomic='true'>
+          {title}
+        </small>
+      }
     </div>;
   }
 }
 
 Input.propTypes = {
-  store: PropTypes.object,
   autoCapitalize: PropTypes.string,
   autoComplete: PropTypes.string,
   autoCorrect: PropTypes.string,

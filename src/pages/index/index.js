@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Button from '../../components/button';
 import Input from '../../components/input';
 
-class CreateAccount extends Component {
+class Index extends Component {
   constructor (props) {
     super(props);
 
@@ -49,10 +49,12 @@ class CreateAccount extends Component {
     this.setState({ submitted: false });
 
     if (this.props.createAccount.isError) {
-      return this.setState({ accountCreated: false });
+      return this.setState({
+        accountCreated: false
+      });
     }
 
-    this.props.history.push('/login');
+    this.props.history.push('/thank-you');
   }
 
   async handleUsernameCheck (e) {
@@ -104,8 +106,6 @@ class CreateAccount extends Component {
   }
 
   render () {
-    const store = this.props;
-    const checkValidity = this.state.checkValidity;
     const inputErrorMessage = () => {
       if (this.state.usernameAlreadyExists) {
         return this.errorMessages.userExists;
@@ -138,25 +138,23 @@ class CreateAccount extends Component {
               <Input
                 autoFocus
                 autoComplete='business-name'
-                checkValidity={checkValidity}
+                checkValidity={this.state.checkValidity}
                 className='input-container'
                 id='merchantName'
                 label='Merchant Name'
                 name='merchantName'
                 required
-                store={store}
                 title='required'
                 type='text'
               />
 
               <Input
                 autoComplete='business-description'
-                checkValidity={checkValidity}
+                checkValidity={this.state.checkValidity}
                 className='input-container'
                 id='merchantDescription'
                 label='Merchant Description'
                 name='merchantDescription'
-                store={store}
                 title='required'
                 type='text'
               />
@@ -165,27 +163,25 @@ class CreateAccount extends Component {
             <div>
               <Input
                 autoComplete='Username'
-                checkValidity={checkValidity}
+                checkValidity={this.state.checkValidity}
                 className='input-container'
                 id='username'
                 label='Username'
                 name='username'
                 onBlur={(e) => { this.handleUsernameCheck(e); }}
                 required
-                store={store}
                 title={inputErrorMessage()}
                 type='text'
               />
 
               <Input
                 autoComplete='password'
-                checkValidity={checkValidity}
+                checkValidity={this.state.checkValidity}
                 className='input-container'
                 id='password'
                 label='Password'
                 name='password'
                 required
-                store={store}
                 title='required'
                 type='password'
               />
@@ -193,28 +189,26 @@ class CreateAccount extends Component {
             <div>
               <Input
                 autoComplete='given-name'
-                checkValidity={checkValidity}
+                checkValidity={this.state.checkValidity}
                 className='input-container'
                 id='firstname'
                 label='First Name'
                 maxLength='40'
                 name='firstname'
                 required
-                store={store}
                 title='required'
                 type='text'
               />
 
               <Input
                 autoComplete='family-name'
-                checkValidity={checkValidity}
+                checkValidity={this.state.checkValidity}
                 className='input-container'
                 id='lastname'
                 label='Last Name'
                 maxLength='40'
                 name='lastname'
                 required
-                store={store}
                 title='required'
                 type='text'
               />
@@ -222,27 +216,25 @@ class CreateAccount extends Component {
             <div>
               <Input
                 autoComplete='email'
-                checkValidity={checkValidity}
+                checkValidity={this.state.checkValidity}
                 className='input-container'
                 id='email'
                 label='Email Address'
                 name='email'
                 onBlur={(e) => { this.handleEmailCheck(e); }}
                 required
-                store={store}
                 title={inputErrorMessage()}
                 type='email'
               />
 
               <Input
                 autoComplete='tel-national'
-                checkValidity={checkValidity}
+                checkValidity={this.state.checkValidity}
                 className='input-container'
                 id='phone'
                 label='Phone Number'
                 name='phone'
                 required
-                store={store}
                 title='required'
                 type='tel'
               />
@@ -251,7 +243,6 @@ class CreateAccount extends Component {
               type='submit'
               className='is-full-width'
               label='Create Account'
-              store={store}
             />
           </form>
         </div>
@@ -260,14 +251,12 @@ class CreateAccount extends Component {
   }
 }
 
-CreateAccount.propTypes = {
+Index.propTypes = {
   className: PropTypes.string
-  // locale: PropTypes.object.isRequired,
-  // config: PropTypes.object.isRequired
 };
 
-CreateAccount.defaultProps = {
+Index.defaultProps = {
   className: ''
 };
 
-export default CreateAccount;
+export default Index;
