@@ -123,7 +123,6 @@ class Index extends Component {
         <div className={`hiq-well hiq-create-account-well`}>
           <h1 className='login-form-header'>Create Account</h1>
           <p className='is-login-form-message'>Create a merchant account with the following information</p>
-
           {
             this.props.createAccount.isError && (
               <p className={`is-form-error`} role='alert' aria-atomic='true'>
