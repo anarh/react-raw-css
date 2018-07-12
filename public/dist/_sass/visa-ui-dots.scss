@@ -1,0 +1,142 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-dots
+  BEM Naming Convention http://getbem.com/naming/
+  PX to Em Conversion http://px-em.com/
+
+  @author sacuna
+*/
+
+$color-dots-background: theme(action-toggle);
+$color-dots-background--hover: theme(action-toggle--hover);
+$color-dots-background--disabled: theme(action-input--disabled);
+$color-dots-border: theme(button--default-text);
+$color-dots-border--required--hover: theme(notification-neutral);
+
+@mixin dot {
+  align-items: center;
+  background: $color-dots-background;
+  border-radius: 100%;
+  color: $color-white;
+  // cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  font-weight: theme(font-weight--bold);
+  letter-spacing: .5px;
+  text-align: center;
+  transition: background .25s ease;
+  user-select: none;
+
+  // &:hover,
+  // &:focus:not(:active), // sass-lint:disable-line force-pseudo-nesting
+  // &:active {
+  //   background: $color-dots-background--hover;
+  //
+  //   .visa-ui-dot-label {
+  //     border: 2px solid $color-dots-border;
+  //
+  //     &::after {
+  //       border-top: 1.5px solid $color-dots-background--hover;
+  //       transition: border-top .25s ease;
+  //     }
+  //   }
+  // }
+
+  &.visa-ui-state--disabled {
+    background: $color-dots-background--disabled;
+    cursor: default;
+    opacity: .8;
+
+    &:hover {
+      background: $color-dots-background--disabled;
+      opacity: .8;
+    }
+  }
+}
+
+.visa-ui-dot {
+  @at-root #{&}--message {
+    @include dot;
+    height: 50px;
+    width: 50px;
+
+    .visa-ui-dot-label {
+      border: 2px solid $color-dots-border;
+
+      &::after {
+        @include xbrowser-property(transform, rotate(45deg));
+        background-color: $color-dots-background;
+        border-bottom: 2px solid $color-dots-border;
+        border-left: 0;
+        border-right: 2px solid $color-dots-border;
+        border-top: 0;
+        content: '';
+        height: 5px;
+        margin-left: -8px;
+        margin-top: 18px;
+        position: absolute;
+        width: 5px;
+      }
+    }
+
+    &.visa-ui-state--disabled {
+      .visa-ui-dot-label {
+        &::after {
+          background: $color-dots-background--disabled;
+        }
+      }
+
+      &:focus {
+        background: $color-dots-background--disabled;
+
+        .visa-ui-dot-label {
+          &::after {
+            border-top: 1.5px solid $color-dots-background--disabled;
+            transition: border-top .25s ease;
+          }
+        }
+      }
+    }
+  }
+
+  @at-root #{&}--comment {
+    @include dot;
+    height: 24px;
+    width: 24px;
+
+    .visa-ui-dot-label {
+      margin-top: 0%;
+    }
+
+    &:hover,
+    &:focus:not(:active), // sass-lint:disable-line force-pseudo-nesting
+    &:active {
+      .visa-ui-dot-label {
+        border: 0px solid $color-dots-border;
+      }
+    }
+  }
+
+  @at-root #{&}--required {
+    @include dot;
+    height: 6px;
+    width: 6px;
+
+    &:hover {
+      background: $color-dots-border--required--hover;
+      opacity: 1;
+    }
+  }
+
+  @at-root #{&}-label {
+    height: 20px;
+    margin: auto;
+    width: 20px;
+  }
+}

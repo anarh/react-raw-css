@@ -1,0 +1,109 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-radio
+  BEM Naming Convention http://getbem.com/naming/
+
+  @author sacuna
+*/
+
+$color-radio: theme(action-toggle);
+$color-radio--disabled: theme(action-toggle--disabled);
+
+.visa-ui-radio {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+
+  + label {
+    &.visa-ui-radio-label {
+      cursor: pointer;
+      display: inline-block;
+      line-height: px2em(20px);
+      min-height: px2em(20px);
+      padding-bottom: px2em(4px);
+      padding-left: px2em(28px);
+      padding-right: px2em(4px);
+      padding-top: px2em(4px);
+      position: relative;
+
+      &:empty {
+        padding-right: 0 !important;
+      }
+
+      &::before {
+        background: $color-white;
+        border: px2em(2px) solid theme(action-toggle);
+        border-radius: 100%;
+        content: '';
+        height: px2em(16px);
+        left: px2em(4px);
+        position: absolute;
+        top: px2em(4px);
+        width: px2em(16px);
+      }
+
+      &::after {
+        @include xbrowser-property(transition, all .2s ease);
+        background: theme(action-toggle);
+        border-radius: 100%;
+        content: '';
+        height: px2em(12px);
+        left: px2em(8px);
+        position: absolute;
+        top: px2em(8px);
+        width: px2em(12px);
+      }
+    }
+  }
+
+  &:disabled {
+    + label {
+      &.visa-ui-radio-label {
+        &::before {
+          border-color: theme(action-toggle--disabled);
+        }
+
+        &::after {
+          background: theme(action-toggle--disabled);
+        }
+      }
+    }
+  }
+
+  &:focus {
+    &:not(:active) {
+      + label {
+        &.visa-ui-radio-label {
+          outline: px2em(1px) dashed theme(focus-outline-color);
+        }
+      }
+    }
+  }
+
+  &:not(:checked) {
+    + label {
+      &.visa-ui-radio-label {
+        &::after {
+          @include xbrowser-property(transform, scale(0));
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &:checked {
+    + label {
+      &.visa-ui-radio-label {
+        &::after {
+          @include xbrowser-property(transform, scale(1));
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

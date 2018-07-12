@@ -1,0 +1,62 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-avatar
+  BEM Naming Convention http://getbem.com/naming/
+
+  @author sacuna
+*/
+
+.visa-ui-avatar {
+  display: inline-block;
+
+  & &--initials {
+    background-color: theme(avatar-logo-background);
+    border-radius: 50px;
+    color: theme(button--default-text);
+    display: inline-block;
+    font-size: px2em(20px);
+    font-weight: theme(font-weight--light);
+    height: 28px;
+    line-height: 28px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 28px;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+
+    &:focus,
+    &:active {
+      span {
+        background-color: transparent !important;
+      }
+    }
+  }
+
+  & &--photo {
+    background-image: url('../_imgs/user.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+  }
+
+  & &--company-logo {
+    background-color: theme(avatar-logo-background);
+    display: inline-block;
+    max-height: 28px;
+    max-width: 40px;
+    padding: 15px 10px;
+  }
+}

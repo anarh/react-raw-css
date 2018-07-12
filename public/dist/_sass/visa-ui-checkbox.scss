@@ -1,0 +1,130 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-checkbox
+  BEM Naming Convention http://getbem.com/naming/
+
+  @author sacuna
+*/
+
+
+$color-checkbox-background: theme(action-toggle);
+$color-checkbox-background--disabled: theme(action-toggle--disabled);
+
+.visa-ui-checkbox {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+
+  + label {
+    &.visa-ui-checkbox-label {
+      cursor: pointer;
+      display: inline-block;
+      line-height: px2em(20px);
+      min-height: px2em(20px);
+      padding-bottom: px2em(4px);
+      padding-left: px2em(28px);
+      padding-right: px2em(4px);
+      padding-top: px2em(4px);
+      position: relative;
+
+      &:empty {
+        padding-right: 0 !important;
+      }
+
+      &::before {
+        background: $color-white;
+        border: px2em(2px) solid theme(action-toggle);
+        content: '';
+        height: px2em(16px);
+        left: px2em(4px);
+        position: absolute;
+        top: px2em(4px);
+        width: px2em(16px);
+      }
+
+      &::after {
+        @include xbrowser-property(transition, all .2s ease);
+        @include xbrowser-property(transform, rotate(45deg));
+        border: solid $color-white;
+        border-width: 0 px2em(2px) px2em(2px) 0;
+        content: '';
+        display: block;
+        height: px2em(10px);
+        left: px2em(10px);
+        position: absolute;
+        top: px2em(7px);
+        width: px2em(4px);
+      }
+    }
+  }
+
+  &:disabled {
+    + label {
+      &.visa-ui-checkbox-label {
+        &::before {
+          // background-color: theme(action-toggle--disabled);
+          border-color: theme(action-toggle--disabled);
+        }
+
+        &::after {
+          background: theme(action-toggle--disabled);
+        }
+      }
+    }
+  }
+
+  &:focus {
+    &:not(:active) {
+      + label {
+        &.visa-ui-checkbox-label {
+          outline: px2em(1px) dashed theme(focus-outline-color);
+        }
+      }
+    }
+  }
+
+  &:not(:checked) {
+    + label {
+      &.visa-ui-checkbox-label {
+        &::after {
+          @include xbrowser-property(transform, scale(0) rotate(45deg));
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &:checked {
+    + label {
+      &.visa-ui-checkbox-label {
+        &::before {
+          background-color: theme(action-toggle);
+        }
+
+        &::after {
+          @include xbrowser-property(transform, scale(1) rotate(45deg));
+          opacity: 1;
+        }
+      }
+    }
+
+    &:disabled {
+      + label {
+        &.visa-ui-checkbox-label {
+          &::before {
+            background-color: theme(action-toggle--disabled);
+          }
+
+          &::after {
+            background-color: theme(action-toggle--disabled);
+          }
+        }
+      }
+    }
+  }
+}

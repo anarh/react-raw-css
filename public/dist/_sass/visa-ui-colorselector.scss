@@ -1,0 +1,327 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-colorselector
+  BEM Naming Convention http://getbem.com/naming/
+
+  @author sacuna
+*/
+
+$color-colorbox-background: theme(notification-foreground-light);
+$color-colorbox-border: theme(action-primary--disabled);
+$color-colorbox-node-border: theme(slider-background);
+$color-colorbox-input: theme(font-color);
+
+.visa-ui-color {
+  $colorbox-width: px2em(240px); // 14.142857142857142em;
+  $colorbox-height: px2em(148px); // 10.285714285714285em
+  $colorbox-gutter: px2em(8px); // 0.3571428571428571em
+  $colorbox-panel-width: $colorbox-width + ($colorbox-gutter * 2);
+  $colorbox-node: px2em(4px);
+
+  $colorbox-slider-width: px2em(160px);
+  $colorbox-slider-height: px2em(12px);
+
+  $colorbox-box-width: px2em(32px);
+  $colorbox-box-height: px2em(32px);
+
+  $colorbox-border--color: $color-colorbox-border;
+
+  $colorbox-label-width: 40px;
+  $colorbox-label-padding: 4px;
+
+  $colorbox-input-padding: 4px;
+  $colorbox-input-width: 36px - ($colorbox-input-padding * 2);
+  $colorbox-input-height: 28px - ($colorbox-input-padding * 2);
+  $colorbox-hex-width: 64px - ($colorbox-input-padding * 2);
+
+  @mixin colobox-transparency {
+    background-image: url('../_imgs/transparent.png');
+    background-repeat: repeat;
+  }
+
+  &selector {
+    &-trigger {
+      background: $color-colorbox-background !important;
+      border: 1px solid $colorbox-border--color;
+      justify-content: center;
+      margin: px2em(0px);
+      max-height: $colorbox-label-width * 2;
+      max-width: $colorbox-label-width * 2;
+      min-width: $colorbox-label-width * 2;
+      padding: px2em(0px) !important;
+
+      &:hover,
+      &:focus {
+        background-color: $color-colorbox-background;
+      }
+
+      .visa-ui-btn--label {
+        @include display-flex;
+        $calculated-width: $colorbox-label-width - ($colorbox-label-padding * 2);
+        background-color: theme(notification-negative);
+        height: $calculated-width;
+        margin: $colorbox-label-padding;
+        max-height: $calculated-width;
+        max-width: $calculated-width;
+        min-width: $calculated-width;
+        padding: 0px !important;
+        width: $calculated-width;
+
+        @-moz-document url-prefix() {
+          & {
+            align-self: flex-start;
+            flex-grow: 1;
+            margin: px2em(4px) px2em(4px) px2em(4px) px2em(2px);
+          }
+        }
+      }
+
+      .visa-ui-btn--action {
+        @include display-flex;
+        $calculated-width: $colorbox-label-width - ($colorbox-label-padding * 2);
+        border-left: 1px solid $colorbox-border--color !important;
+        // color: theme(font-color);
+        float: right;
+        font-size: 2em;
+        height: $calculated-width;
+        // line-height: $calculated-width;
+        margin: px2em(0px);
+        max-height: $calculated-width;
+        max-width: $calculated-width;
+        min-width: $calculated-width;
+        padding: $colorbox-label-padding !important;
+
+        @-moz-document url-prefix() {
+          & {
+            align-self: flex-start;
+            flex-grow: 1;
+            padding: px2em(8px) px2em(0px) px2em(0px) px2em(0px) !important;
+            position: relative;
+            top: -1px;
+
+            svg {
+              left: 2px;
+              position: relative;
+            }
+          }
+        }
+
+        .visa-ui-icon {
+          @include svg-icon($icon-size--low, theme(font-color));
+        }
+      }
+    }
+
+    .visa-ui-panel--absolute {
+      max-width: $colorbox-panel-width;
+      min-width: $colorbox-panel-width;
+      width: $colorbox-panel-width;
+    }
+
+    [class^='visa-ui-colorselector-icon'] {
+      border: px2em(1px) solid $colorbox-border--color;
+      height: $colorbox-box-height;
+      width: $colorbox-box-width;
+
+      .visa-ui-colorselector-placeholder {
+        height: $colorbox-box-height;
+        width: $colorbox-box-width;
+      }
+    }
+
+    .visa-ui-colorselector-icon {
+      &--drop {
+        background-image: url('../_imgs/color-drop.png');
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &--choice {
+        @include colobox-transparency;
+      }
+    }
+
+    &-topbar {
+      .col {
+        padding: $colorbox-gutter $colorbox-gutter px2em(0px) $colorbox-gutter !important;
+      }
+    }
+
+    &-midbar {
+      .col {
+        flex-grow: 0 !important;
+        padding: $colorbox-gutter px2em(0px) px2em(0px) $colorbox-gutter * 3 / 4 !important;
+      }
+    }
+
+    &-lowbar {
+      .col {
+        align-content: center;
+        flex-grow: 0 !important;
+        padding: px2em(0px) px2em(0px) $colorbox-gutter $colorbox-gutter / 2 !important;
+
+        input {
+          height: $colorbox-input-height;
+          margin-right: 2px;
+          max-height: $colorbox-input-height;
+          max-width: $colorbox-input-width;
+          padding: $colorbox-input-padding;
+          width: $colorbox-hex-width;
+        }
+
+        label {
+          display: block;
+        }
+
+        &:first-child {
+          input {
+            height: $colorbox-input-height;
+            max-height: $colorbox-input-height;
+            max-width: $colorbox-hex-width;
+            padding: $colorbox-input-padding;
+            width: $colorbox-hex-width;
+          }
+        }
+      }
+    }
+
+    .visa-ui-colorbar-container {
+      flex-basis: px2em(138px) !important;
+
+      @mixin colorbar {
+        border-radius: px2em(0px);
+        display: block;
+        height: $colorbox-slider-height;
+        margin-bottom: $colorbox-gutter;
+        max-width: $colorbox-slider-width;
+        width: $colorbox-slider-width;
+      }
+
+      @mixin color-slider {
+        @include colorbar;
+
+        &-track {
+          @include colorbar;
+          background: transparent !important;
+        }
+
+        &-gradient {
+          @include colorbar;
+          @include gradient-background(90deg, white, transparent);
+          position: absolute;
+          top: 0px;
+        }
+
+        &-node {
+          $node-size: px2em(10px); // 0.7142857142857142em
+          background-color: theme(notification-foreground-light);
+          border: 1px solid $color-colorbox-node-border;
+          border-radius: px2em(2px);
+          height: $node-size;
+          margin-left: px2em(-3px);
+          top: px2em(0px);
+          width: px2em(4px); // 0.2857142857142857em
+
+          &:focus,
+          &:active,
+          &:focus:active { // sass-lint:disable-line force-pseudo-nesting
+            border: px2em(2px) dashed theme(focus-outline-color);
+
+            &::before {
+              display: none;
+            }
+          }
+
+          &.visa-ui-state--active {
+            background-color: theme(notification-foreground-light);
+            border: px2em(1px) solid $colorbox-border--color;
+          }
+        }
+      }
+
+      .visa-ui-slider {
+        @include color-slider;
+
+        &.visa-ui-colorbar--colors {
+          @include gradient-background(90deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+        }
+
+        &.visa-ui-colorbar--alpha {
+          background-color: theme(primary);
+        }
+      }
+    }
+
+    input {
+      background-color: $color-colorbox-background;
+      border: px2em(1px) solid $colorbox-border--color;
+      color: $color-colorbox-input;
+      display: block;
+      padding: $colorbox-input-padding;
+    }
+
+    label {
+      margin: auto;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  @mixin colorbox {
+    display: block;
+    height: $colorbox-height;
+    width: $colorbox-width;
+  }
+
+  &box {
+    @include colorbox;
+    background-color: theme(primary);
+    overflow: hidden;
+    position: relative;
+
+    &-node {
+      border: 2px solid $color-colorbox-background;
+      border-radius: $colorbox-node;
+      box-shadow: 0px 0px 1px $color-black;
+      cursor: pointer;
+      display: block;
+      height: $colorbox-node;
+      position: absolute;
+      width: $colorbox-node;
+      z-index: $utils-layer-1 + 4;
+
+      &:hover {
+        box-shadow: 0px 0px 3px $color-colorbox-input;
+      }
+
+      &:active {
+        border: 2px solid $color-ebb;
+        box-shadow: 0px 0px 2px $color-black;
+      }
+    }
+
+    &--white {
+      @include colorbox;
+      @include gradient-background(-90deg, transparent, #fff);
+      left: 0em;
+      position: absolute;
+      top: 0em;
+      z-index: $utils-layer-1 + 2;
+    }
+
+    &--black {
+      @include colorbox;
+      @include gradient-background(180deg, transparent, $color-black);
+      left: 0em;
+      position: absolute;
+      top: 0em;
+      z-index: $utils-layer-1 + 3;
+    }
+  }
+}

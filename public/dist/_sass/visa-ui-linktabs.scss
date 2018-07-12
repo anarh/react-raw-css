@@ -1,0 +1,67 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-linktabs
+  BEM Naming Convention http://getbem.com/naming/\
+
+  @author sacuna
+*/
+
+$color-linktabs-text: theme(navigation-background);
+$color-linktabs-text--hover: theme(action-primary--hover);
+
+.visa-ui-linktabs {
+  $linktabs-padding-top: px2em(36px);
+  $linktabs-padding-bottom: px2em(16px);
+  $linktabs-padding-side: px2em(16px);
+
+  display: inline-block;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+
+  &--item {
+    display: inline-block;
+    list-style: none;
+    margin: 0px $linktabs-padding-side;
+    padding: 0px !important;
+
+    &:first-of-type {
+      margin-left: 0px;
+    }
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+
+    a {
+      color: $color-linktabs-text !important;
+      cursor: pointer;
+      display: inline-block;
+      padding: $linktabs-padding-top 0px $linktabs-padding-bottom 0px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom: 2px solid $color-linktabs-text--hover;
+        color: $color-linktabs-text--hover !important;
+        padding-bottom: 11px;
+        text-decoration: none;
+      }
+    }
+
+    &.visa-ui-state--active,
+    &:active {
+      a {
+        border-bottom: 2px solid $color-linktabs-text;
+        color: $color-linktabs-text !important;
+        padding-bottom: 11px;
+      }
+    }
+  }
+}

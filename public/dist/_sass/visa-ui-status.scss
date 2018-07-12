@@ -1,0 +1,139 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-status
+  BEM Naming Convention http://getbem.com/naming/
+
+  @author sacuna
+*/
+
+$status-ring-size: px2em(108px);
+$status-icon-size: px2em(90px);
+
+$color-status--not-started: theme(status--not-started);
+$color-status--completed: theme(status--completed);
+$color-status--approved: theme(status--approved);
+$color-status--in-progress-indicator: theme(status--in-progress-indicator);
+
+@mixin visa-ui-status {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+
+  .visa-ui-status {
+    &-gauge {
+      border: px2em(6px) solid transparent;
+      border-radius: $status-ring-size;
+      display: block;
+      height: $status-ring-size;
+      margin-bottom: px2em(14px);
+      width: $status-ring-size;
+      z-index: 1;
+    }
+
+    &-icon {
+      background-color: $color-status--not-started;
+      border-radius: $status-icon-size;
+      content: ' ';
+      display: block;
+      height: $status-icon-size;
+      margin: auto;
+      margin-top: ($status-ring-size - $status-icon-size) / 2;
+      position: relative;
+      width: $status-icon-size;
+      z-index: 3;
+
+      [class^='visa-ui-icon'] {
+        @include svg-icon($icon-size--high, $color-white);
+        margin-top: px2em(20px);
+      }
+    }
+
+    &-step {
+      display: block;
+      font-size: 18pt;
+      font-weight: theme(font-weight--regular);
+      margin-bottom: px2em(5px);
+    }
+
+    &-label {
+      color: $color-status--not-started;
+      display: block;
+      margin-top: px2em(8px);
+    }
+  }
+}
+
+.visa-ui-status,
+[class^='visa-ui-status'] {
+  @include visa-ui-status;
+
+  &.visa-ui-status--default {
+    @include visa-ui-status;
+
+    .visa-ui-status-icon {
+      border-color: transparent !important;
+    }
+  }
+
+  &.visa-ui-status--progress,
+  &.visa-ui-status--completed {
+    @include visa-ui-status;
+
+    .visa-ui-status-gauge {
+      border-color: $color-status--completed;
+
+      .visa-ui-status-icon {
+        background-color: $color-status--completed;
+      }
+    }
+
+    .visa-ui-status-label {
+      color: $color-status--completed;
+    }
+  }
+
+  &.visa-ui-status--progress {
+    // position: relative;
+
+    .visa-ui-status-gauge {
+      &::after {
+        background: transparent;
+        border-left: 6px solid $color-status--in-progress-indicator;
+        border-top: 6px solid $color-status--in-progress-indicator;
+        border-top-left-radius: $status-ring-size * 2;
+        content: ' ';
+        display: block;
+        float: left;
+        height: $status-ring-size / 2;
+        left: px2em(-6px);
+        position: absolute;
+        top: px2em(-6px);
+        width: $status-ring-size / 2;
+        z-index: 2;
+      }
+    }
+  }
+
+  &.visa-ui-status--approved {
+    @include visa-ui-status;
+
+    .visa-ui-status-gauge {
+      border-color: $color-status--approved;
+
+
+      .visa-ui-status-icon {
+        background-color: $color-status--approved;
+      }
+    }
+
+    .visa-ui-status-label {
+      color: $color-status--approved;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-pagination
+  BEM Naming Convention http://getbem.com/naming/
+
+  @author sacuna
+*/
+$visa-ui-step-size: px2em(30px);
+
+$color-pagination-item-text: theme(font-color);
+$color-pagination-item-background--active: theme(action-input--active);
+$color-pagination-item-text--active: theme(focus-outline-color);
+$color-pagination-dots: theme(action-toggle--disabled);
+$color-pagination-dots--active: theme(action-primary--hover);
+
+
+ul {
+  &.visa-ui-pagination,
+  &[class^='visa-ui-pagination'],
+  &.visa-ui-stepper {
+    $page-size: 32px;
+
+    list-style: none;
+    margin: auto;
+    padding: px2em(20px) px2em(0px);
+    text-align: center;
+    width: 100%;
+
+    li {
+      border-radius: $page-size;
+      color: $color-pagination-item-text;
+      display: inline-block;
+      line-height: $page-size;
+      margin: 0px 2px;
+      outline: none;
+      text-align: center;
+
+      &.visa-ui-pagination-control {
+        position: relative;
+        top: 4px;
+
+        i {
+          font-weight: theme(font-weight--bold);
+        }
+      }
+
+      .visa-ui-btn-icon--secondary {
+        height: $page-size !important;
+        max-height: $page-size !important;
+        min-height: $page-size !important;
+        min-width: $page-size !important;
+        padding: 0px !important;
+        width: unset !important;
+
+        .visa-ui-btn--label {
+          padding: 0px 10px !important;
+          z-index: 2;
+        }
+
+        &:focus,
+        &:focus:not(:active), // sass-lint:disable-line force-pseudo-nesting
+        &:active {
+          &::before {
+            height: $page-size - 2 !important;
+            max-height: $page-size - 2 !important;
+            max-width: unset !important;
+            min-height: $page-size - 2 !important;
+            min-width: $page-size - 2 !important;
+            width: 100% !important;
+            z-index: 1;
+          }
+        }
+      }
+
+      &.visa-ui-state--active {
+        .visa-ui-btn-icon--secondary {
+          background-color: $color-pagination-item-background--active;
+          color: $color-pagination-item-text--active;
+        }
+      }
+    }
+
+    &.visa-ui-pagination--dots {
+      li {
+        background-color: $color-pagination-dots;
+        border-radius: px2em(13px);
+        height: px2em(13px);
+        margin: px2em(0px) px2em(14px);
+        width: px2em(13px);
+
+        &.visa-ui-state--active {
+          background-color: $color-pagination-dots--active;
+        }
+      }
+    }
+  }
+}

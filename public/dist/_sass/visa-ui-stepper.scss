@@ -1,0 +1,152 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-stepper
+  BEM Naming Convention http://getbem.com/naming/
+
+  @author sacuna
+*/
+
+$step-size: 32px;
+
+$color-stepper-step--completed-background: theme(action-primary--hover);
+$color-stepper-step--completed: theme(action-secondary);
+$color-stepper-step--active: theme(primary);
+
+ul {
+  &.visa-ui-stepper {
+    animation-fill-mode: forwards;
+    border: 1px solid transparent;
+    cursor: default !important;
+
+    @mixin step-element {
+      height: $step-size;
+      max-height: $step-size;
+      max-width: $step-size;
+      min-height: $step-size;
+      min-width: $step-size;
+      width: $step-size;
+    }
+
+    li {
+      &.visa-ui-stepper-step {
+        margin: 0em px2em(18px);
+        max-height: px2em(32px) !important;
+
+        .visa-ui-btn--label {
+          cursor: default !important;
+        }
+      }
+    }
+
+    .visa-ui-btn-icon--secondary {
+      @include step-element;
+      background-color: transparent !important;
+
+      &[disabled] {
+        cursor: default !important;
+      }
+
+      .visa-ui-btn--label {
+        padding: 0px !important;
+      }
+    }
+
+    .visa-ui-stepper-step-label {
+      @include xbrowser-property(transform, rotate(90deg));
+      display: none;
+    }
+
+    .visa-ui-state--completed {
+      background-color: $color-stepper-step--completed-background;
+
+      .visa-ui-btn-icon--secondary {
+        background-color: $color-stepper-step--completed-background;
+        position: relative;
+        z-index: 1;
+      }
+
+      .visa-ui-stepper-step-label {
+        @include step-element;
+        animation-duration: .35s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: -1;
+        animation-name: rotate-check;
+        border-radius: $step-size;
+        color: $color-stepper-step--completed;
+        display: block;
+        margin-top: -$step-size;
+        position: absolute;
+        transition-timing-function: linear;
+        z-index: 2;
+
+        _:-ms-fullscreen, // sass-lint:disable-line force-pseudo-nesting
+        .ie11up,
+        & {
+          margin-top: $step-size * -1.34;
+        }
+
+        .visa-ui-icon {
+          @include svg-icon($icon-size--low, $color-stepper-step--completed);
+          position: relative;
+          top: ($step-size - $icon-size--low) / 2;
+        }
+      }
+    }
+
+    &.visa-ui-state--active {
+      background-color: transparent !important;
+      color: $color-stepper-step--active !important;
+
+      .visa-ui-btn-icon--secondary {
+        background-color: transparent !important;
+        cursor: default !important;
+      }
+    }
+
+    .visa-ui-tooltip {
+      border: 0px;
+      margin-top: 15px;
+    }
+  }
+}
+
+@keyframes rotate-check {
+  0% {
+    @include xbrowser-property(transform, rotate(90deg));
+    background-color: $color-stepper-step--completed;
+  }
+
+  100% {
+    @include xbrowser-property(transform, rotate(0deg));
+    background-color: $color-stepper-step--completed-background;
+  }
+}
+
+.visa-ui-stepper-animation {
+  animation-duration: .35s;
+  animation-iteration-count: -1;
+  animation-name: rotate-check;
+  transition-timing-function: linear;
+}
+
+.visa-ui-stepper--animate {
+  transition: left .2s ease;
+}
+
+//border movement
+.visa-ui-stepper-border {
+  border: 1px solid $color-stepper-step--completed-background;
+  border-radius: $step-size;
+  display: block;
+  height: $step-size;
+  margin-top: -1px;
+  position: relative;
+  width: $step-size;
+  z-index: 1;
+}

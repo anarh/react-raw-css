@@ -1,0 +1,72 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-panel
+  BEM Naming Convention http://getbem.com/naming/
+
+  @author sacuna
+*/
+
+$color-panel-background: theme(action-secondary);
+$color-panel-title: theme(action-toggle);
+$color-panel-shadow: rgba(0, 0, 0, .2);
+
+@mixin default-panel {
+  background-color: $color-panel-background;
+  box-shadow: 0px 3px 4px 2px $color-panel-shadow;
+  min-width: 280px;
+  overflow-x: show;
+
+  &-title {
+    color: $color-panel-title;
+    padding: px2em(8px);
+  }
+
+  .visa-ui-listbox {
+    border: 0px;
+    overflow-y: auto;
+    z-index: $utils-layer-1 + 3;
+  }
+
+  .visa-ui-btn-group {
+    padding: px2em(8px);
+  }
+}
+
+.visa-ui-panel {
+  @include default-panel;
+
+  @at-root #{&}--absolute {
+    @include default-panel;
+    display: none;
+    position: absolute;
+    z-index: $utils-layer-1 + 2;
+  }
+
+  @at-root #{&}--fixed {
+    @include default-panel;
+    display: none;
+    position: fixed;
+    z-index: $utils-layer-1 + 2;
+  }
+
+  @at-root #{&}-curtain {
+    background-color: transparent !important;
+    display: none;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: $utils-layer-1 + 1;
+  }
+
+  @at-root #{&}--show {
+    display: block !important;
+  }
+}

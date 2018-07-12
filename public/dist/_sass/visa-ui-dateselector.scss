@@ -1,0 +1,100 @@
+@import 'visa-ui-utils';
+@import 'visa-ui-colors';
+@import 'visa-ui-theme';
+@import 'visa-ui-core';
+
+
+
+/***
+  visa-ui-dateselector
+  BEM Naming Convention http://getbem.com/naming/
+
+  @author sacuna
+*/
+
+$color-dataselector-primary: theme(navigation-background);
+$color-dateselector-date-border: theme(focus-outline-color);
+$color-dateselector-date-background--selected: theme(action-primary--disabled);
+$color-dateselector-date-background--active: theme(action-primary);
+$color-dateselector-date: theme(action-input--disabled);
+$color-dateselector-background: theme(background);
+$color-dateselector-label: theme(action-toggle);
+
+.visa-ui-dateselector {
+  color: $color-dataselector-primary;
+  cursor: default !important;
+  width: 100%;
+
+  .visa-ui-input {
+    position: relative;
+  }
+
+  &-header {
+    align-content: center;
+    border-bottom: 2px solid $color-dateselector-date-background--selected;
+    line-height: 30px;
+    text-align: center;
+
+    > [class^='col'] {
+      padding-bottom: 0px !important;
+    }
+
+    &-label,
+    .visa-ui-btn-link {
+      color: $color-dateselector-label;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    .visa-ui-btn-link {
+      font-size: px2em(20px);
+      margin-top: 5px;
+      max-height: 22px;
+      text-align: center;
+
+      [class^='visa-ui-icon'] {
+        @include svg-icon(1rem, $color-dateselector-label);
+        position: relative;
+        top: -3px;
+      }
+    }
+  }
+
+  &-calendar {
+    width: 100%;
+
+    tr {
+
+      th,
+      td {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        width: 30px;
+
+        .visa-ui-dateselector--date {
+          cursor: pointer;
+
+          &:hover {
+            background-color: $color-dateselector-background;
+          }
+
+          &:active {
+            background-color: $color-dateselector-date-background--active;
+            color: $color-white;
+          }
+
+          &.visa-ui-state--active {
+            background-color: $color-dateselector-date-background--selected;
+            color: $color-dateselector-date-border;
+          }
+
+          &-other {
+            background-color: transparent !important;
+            color: $color-dateselector-date;
+          }
+        }
+      }
+    }
+  }
+}
