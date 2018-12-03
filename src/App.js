@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div onTouchStart={() => null}>
-        <button className={`vds-btn-text--tertiary`} onClick={(e) => document.dir = document.dir === 'rtl' ? 'ltr' : 'rtl'}>Toggle Right to Left</button>
+        <button className={`vds-btn-text--tertiary`} onClick={(e) => document.dir = document.dir === 'rtl' ? 'ltr' : 'rtl'}>Toggle Right to Left Support</button>
         <h2>Text</h2>
         <button className="vds-btn-text--primary">PRIMARY</button>
         <button disabled className="vds-btn-text--primary">DISABLED</button>
