@@ -10,11 +10,11 @@ class App extends Component {
         <button className={`vds-btn-text--tertiary`} onClick={(e) => document.dir = document.dir === 'rtl' ? 'ltr' : 'rtl'}>Toggle Right to Left Support</button>
         <h2>Text</h2>
         <button className="vds-btn-text--primary">PRIMARY</button>
-        <button disabled className="vds-btn-text--primary">DISABLED</button>
+        <button disabled className="vds-btn-text--primary">PRIMARY DISABLED</button>
         <button className="vds-btn-text--secondary">SECONDARY</button>
-        <button disabled className="vds-btn-text--secondary">DISABLED</button>
+        <button disabled className="vds-btn-text--secondary">SECONDARY DISABLED</button>
         <button className="vds-btn-text--tertiary">TERTIARY</button>
-        <button disabled className="vds-btn-text--tertiary">DISABLED</button>
+        <button disabled className="vds-btn-text--tertiary">TERTIARY DISABLED</button>
         <button className={`vds-btn-text--primary vds-btn--fullwidth`}>FULL WIDTH PRIMARY</button>
         <button className={`vds-btn-text--secondary vds-btn--fullwidth`}>FULL WIDTH SECONDARY</button>
         <button className={`vds-btn-text--tertiary vds-btn--fullwidth`}>FULL WIDTH TERTIARY</button>
