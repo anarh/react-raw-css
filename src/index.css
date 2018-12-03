@@ -1,6 +1,867 @@
-@import '../node_modules/scss-theme-example/dist/index.css';
+:root {
+  --color-blue: #003ea9;
+  --color-cloudy: #b4b4c6;
+  --color-dark-blue: #1a1f71;
+  --color-fog: #f2f4f8;
+  --color-gray: #767676;
+  --color-green: #077844;
+  --color-ice: #e0eafa;
+  --color-indigo: #2a2e69;
+  --color-lead: #222222;
+  --color-light-blue: #0051dc;
+  --color-milk: #ecece8;
+  --color-night: #15195a;
+  --color-orange: #ff9800;
+  --color-plum: #616188;
+  --color-red: #d50000;
+  --color-smoke: #d7d7de;
+  --color-visa-gold: #f7b600;
+  --color-white: #ffffff;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 700;
+  src: url("./_fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 500;
+  src: url("./_fonts/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: 300;
+  src: url("./_fonts/OpenSans-Light.ttf") format("truetype");
+}
 
 body {
-  margin: 0;
+  font-family: 'OpenSans';
+}
+
+.vds-btn--svg {
+  height: 24px;
+  width: 24px;
+  user-select: none;
+}
+
+/* 
+  Primary button
+*/
+
+.vds-btn-text--primary {
+  align-items: center;
+  appearance: none;
+  background-color: var(--color-blue, #003ea9);
+  border-radius: 2px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: var(--color-white, #ffffff);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 40px;
+  min-width: 64px;
+  outline: 0;
+  padding: 0 16px;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+  vertical-align: middle;
+}
+
+.vds-btn--svg {
+  fill: var(--color-white, #ffffff);
+}
+
+.vds-btn-text--primary:hover,
+.vds-btn-text--primary-state--hover {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-text--primary:focus:not(:disabled):not(:active):not(.vds-btn-text--primary-state--disabled):not(.vds-btn-text--primary-state--active),
+.vds-btn-text--primary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--primary-state--disabled):not(.vds-btn-text--primary-state--active) {
+  background-color: var(--color-light-blue, #0051dc);
+  border: 2px solid var(--color-night, #15195a);
+  text-decoration: underline;
+}
+
+.vds-btn-text--primary:active,
+.vds-btn-text--primary-state--active {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-text--primary:disabled,
+.vds-btn-text--primary-state--disabled {
+  background-color: var(--color-smoke, #d7d7de);
+  pointer-events: none;
+}
+
+/* 
+  Secondary button
+*/
+
+.vds-btn-text--secondary {
+  align-items: center;
+  appearance: none;
+  background-color: var(--color-white, #ffffff);
+  border-radius: 2px;
+  border: 2px solid var(--color-blue, #003ea9);
+  box-sizing: border-box;
+  color: var(--color-blue, #003ea9);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 40px;
+  min-width: 64px;
+  outline: 0;
+  padding: 0 16px;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+  vertical-align: middle;
+}
+
+.vds-btn-text--secondary .vds-btn--svg {
+  fill: var(--color-blue, #003ea9);
+}
+
+.vds-btn-text--secondary:hover,
+.vds-btn-text--secondary-state--hover {
+  background-color: var(--color-ice, #57587d);
+  border-color: var(--color-light-blue, #0051dc);
+  color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-text--secondary:hover .vds-btn--svg,
+.vds-btn-text--secondary-state--hover .vds-btn--svg {
+  fill: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-text--secondary:focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active),
+.vds-btn-text--secondary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active) {
+  background-color: var(--color-ice, #57587d);
+  border-color: var(--color-night, #15195a);
+  color: var(--color-light-blue, #0051dc);
+  text-decoration: underline;
+}
+
+.vds-btn-text--secondary:focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active) .vds-btn--svg,
+.vds-btn-text--secondary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active) .vds-btn--svg {
+  fill: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-text--secondary:active,
+.vds-btn-text--secondary-state--active {
+  background-color: var(--color-light-blue, #0051dc);
+  border-color: transparent;
+  color: var(--color-white, #ffffff);
+}
+
+.vds-btn-text--secondary:active .vds-btn--svg,
+.vds-btn-text--secondary-state--active .vds-btn--svg {
+  fill: var(--color-white, #ffffff);
+}
+
+.vds-btn-text--secondary:disabled,
+.vds-btn-text--secondary-state--disabled {
+  background-color: var(--color-smoke, #d7d7de);
+  border-color: transparent;
+  color: var(--color-white, #ffffff);
+  pointer-events: none;
+}
+
+.vds-btn-text--secondary:disabled .vds-btn--svg,
+.vds-btn-text--secondary-state--disabled .vds-btn--svg {
+  fill: var(--color-white, #ffffff);
+}
+
+/* 
+  Tertiary button
+*/
+
+.vds-btn-text--tertiary {
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px dashed transparent;
+  box-sizing: border-box;
+  color: var(--color-light-blue, #0051dc);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 40px;
+  min-width: 64px;
+  outline: 0;
+  padding: 0 8px;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+  vertical-align: middle;
+}
+
+.vds-btn-text--tertiary .vds-btn--svg {
+  fill: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-text--tertiary:hover,
+.vds-btn-text--tertiary-state--hover {
+  text-decoration: underline;
+}
+
+.vds-btn-text--tertiary:focus:not(:disabled):not(:active):not(.vds-btn-text--tertiary-state--disabled):not(.vds-btn-text--tertiary-state--active),
+.vds-btn-text--tertiary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--tertiary-state--disabled):not(.vds-btn-text--tertiary-state--active) {
+  border-color: var(--color-night, #15195a);
+  text-decoration: underline;
+}
+
+.vds-btn-text--tertiary:active,
+.vds-btn-text--tertiary-state--active {
+  border-color: transparent;
+}
+
+.vds-btn-text--tertiary:disabled,
+.vds-btn-text--tertiary-state--disabled {
+  border-color: transparent;
+  color: var(--color-cloudy, #b4b4c6);
+  pointer-events: none;
+}
+
+.vds-btn-text--tertiary:disabled .vds-btn--svg,
+.vds-btn-text--tertiary-state--disabled .vds-btn--svg {
+  fill: var(--color-cloudy, #b4b4c6);
+}
+
+/* 
+  Full width
+*/
+
+.vds-btn-text--primary.vds-btn--fullwidth,
+.vds-btn-text--secondary.vds-btn--fullwidth,
+.vds-btn-text--tertiary.vds-btn--fullwidth {
+  display: flex;
+  min-height: 64px;
+  min-width: 100%;
+}
+
+/* 
+  Icon button Dark
+*/
+
+.vds-btn-icon--dark {
+  align-items: center;
+  appearance: none;
+  background-color: var(--color-blue, #003ea9);
+  border-radius: 24px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: var(--color-white, #ffffff);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 48px;
+  min-width: 48px;
+  outline: 0;
   padding: 0;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+  vertical-align: middle;
+}
+
+.vds-btn-icon--dark:hover,
+.vds-btn-icon--dark-state--hover {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--dark:focus:not(:disabled):not(:active):not(.vds-btn-icon--dark-state--disabled):not(.vds-btn-icon--dark-state--active),
+.vds-btn-icon--dark-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--dark-state--disabled):not(.vds-btn-icon--dark-state--active) {
+  outline: 2px solid var(--color-night, #15195a);
+}
+
+.vds-btn-icon--dark:active,
+.vds-btn-icon--dark-state--active {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--dark:disabled,
+.vds-btn-icon--dark-state--disabled {
+  background-color: var(--color-white, #ffffff);
+  outline: 0;
+  pointer-events: none;
+}
+
+.vds-btn-icon--dark:disabled .vds-btn--svg,
+.vds-btn-icon--dark-state--disabled .vds-btn--svg {
+  fill: var(--color-smoke, #d7d7de);
+}
+
+/* 
+  Icon button Dark Tiny
+*/
+
+.vds-btn-icon--dark--tiny {
+  align-items: center;
+  appearance: none;
+  background-color: var(--color-blue, #003ea9);
+  border-radius: 24px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: var(--color-white, #ffffff);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 32px;
+  min-width: 32px;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+  vertical-align: middle;
+}
+
+.vds-btn-icon--dark--tiny .vds-btn--svg {
+  height: 16px;
+  width: 16px;
+  user-select: none;
+}
+
+.vds-btn-icon--dark--tiny:hover,
+.vds-btn-icon--dark--tiny-state--hover {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--dark--tiny:focus:not(:disabled):not(:active):not(.vds-btn-icon--dark--tiny-state--disabled):not(.vds-btn-icon--dark--tiny-state--active),
+.vds-btn-icon--dark--tiny-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--dark--tiny-state--disabled):not(.vds-btn-icon--dark--tiny-state--active) {
+  outline: 2px solid var(--color-night, #15195a);
+}
+
+.vds-btn-icon--dark--tiny:active,
+.vds-btn-icon--dark--tiny-state--active {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--dark--tiny:disabled,
+.vds-btn-icon--dark--tiny-state--disabled {
+  background-color: var(--color-white, #ffffff);
+  outline: 0;
+  pointer-events: none;
+}
+
+.vds-btn-icon--dark--tiny:disabled .vds-btn--svg,
+.vds-btn-icon--dark--tiny-state--disabled .vds-btn--svg {
+  fill: var(--color-smoke, #d7d7de);
+}
+
+/* 
+  Icon button Light
+*/
+
+.vds-btn-icon--light {
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 24px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: var(--color-white, #ffffff);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 48px;
+  min-width: 48px;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+  vertical-align: middle;
+}
+
+.vds-btn-icon--light .vds-btn--svg {
+  fill: var(--color-blue, #003ea9);
+}
+
+.vds-btn-icon--light:hover,
+.vds-btn-icon--light-state--hover {
+  background-color: var(--color-ice, #57587d);
+}
+
+.vds-btn-icon--light:hover .vds-btn--svg,
+.vds-btn-icon--light-state--hover .vds-btn--svg {
+  fill: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light:focus:not(:disabled):not(:active):not(.vds-btn-icon--light-state--disabled):not(.vds-btn-icon--light-state--active),
+.vds-btn-icon--light-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light-state--disabled):not(.vds-btn-icon--light-state--active) {
+  background-color: var(--color-ice, #57587d);
+  outline: 2px solid var(--color-night, #15195a);
+}
+
+.vds-btn-icon--light:focus:not(:disabled):not(:active):not(.vds-btn-icon--light-state--disabled):not(.vds-btn-icon--light-state--active) .vds-btn--svg,
+.vds-btn-icon--light-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light-state--disabled):not(.vds-btn-icon--light-state--active) .vds-btn--svg {
+  fill: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light:active,
+.vds-btn-icon--light-state--active {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light:active .vds-btn--svg,
+.vds-btn-icon--light-state--active .vds-btn--svg {
+  fill: var(--color-white, #ffffff);
+}
+
+.vds-btn-icon--light:disabled,
+.vds-btn-icon--light-state--disabled {
+  background-color: var(--color-white, #ffffff);
+  outline: 0;
+  pointer-events: none;
+}
+
+.vds-btn-icon--light:disabled .vds-btn--svg,
+.vds-btn-icon--light-state--disabled .vds-btn--svg {
+  fill: var(--color-smoke, #d7d7de);
+}
+
+/* 
+  Icon button Light Outline
+*/
+
+.vds-btn-icon--light--outline {
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 24px;
+  border: 2px solid var(--color-blue, #003ea9);;
+  box-sizing: border-box;
+  color: var(--color-white, #ffffff);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 48px;
+  min-width: 48px;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+  vertical-align: middle;
+}
+
+.vds-btn-icon--light--outline .vds-btn--svg {
+  fill: var(--color-blue, #003ea9);
+}
+
+.vds-btn-icon--light--outline:hover,
+.vds-btn-icon--light--outline-state--hover {
+  background-color: var(--color-ice, #57587d);
+  border-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light--outline:hover .vds-btn--svg,
+.vds-btn-icon--light--outline-state--hover .vds-btn--svg {
+  fill: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light--outline:focus:not(:disabled):not(:active):not(.vds-btn-icon--light--outline-state--disabled):not(.vds-btn-icon--light--outline-state--active),
+.vds-btn-icon--light--outline-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light--outline-state--disabled):not(.vds-btn-icon--light--outline-state--active) {
+  background-color: var(--color-ice, #57587d);
+  outline: 2px solid var(--color-night, #15195a);
+  border-color: transparent;
+}
+
+.vds-btn-icon--light--outline:focus:not(:disabled):not(:active):not(.vds-btn-icon--light--outline-state--disabled):not(.vds-btn-icon--light--outline-state--active) .vds-btn--svg,
+.vds-btn-icon--light--outline-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light--outline-state--disabled):not(.vds-btn-icon--light--outline-state--active) .vds-btn--svg {
+  fill: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light--outline:active,
+.vds-btn-icon--light--outline-state--active {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light--outline:active .vds-btn--svg,
+.vds-btn-icon--light--outline-state--active .vds-btn--svg {
+  fill: var(--color-white, #ffffff);
+}
+
+.vds-btn-icon--light--outline:disabled,
+.vds-btn-icon--light--outline-state--disabled {
+  background-color: var(--color-white, #ffffff);
+  border-color: var(--color-smoke, #d7d7de);
+  outline: 0;
+  pointer-events: none;
+}
+
+.vds-btn-icon--light--outline:disabled .vds-btn--svg,
+.vds-btn-icon--light--outline-state--disabled .vds-btn--svg {
+  fill: var(--color-smoke, #d7d7de);
+}
+
+/* 
+  Icon button Light Tiny
+*/
+
+.vds-btn-icon--light--tiny {
+  align-items: center;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 24px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: var(--color-white, #ffffff);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 32px;
+  min-width: 32px;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+  vertical-align: middle;
+}
+
+.vds-btn-icon--light--tiny .vds-btn--svg {
+  fill: var(--color-blue, #003ea9);
+  height: 16px;
+  width: 16px;
+  user-select: none;
+}
+
+.vds-btn-icon--light--tiny:hover,
+.vds-btn-icon--light--tiny-state--hover {
+  background-color: var(--color-ice, #57587d);
+}
+
+.vds-btn-icon--light--tiny:hover .vds-btn--svg,
+.vds-btn-icon--light--tiny-state--hover .vds-btn--svg {
+  fill: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light--tiny:focus:not(:disabled):not(:active):not(.vds-btn-icon--light--tiny-state--disabled):not(.vds-btn-icon--light--tiny-state--active),
+.vds-btn-icon--light--tiny-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light--tiny-state--disabled):not(.vds-btn-icon--light--tiny-state--active) {
+  background-color: var(--color-ice, #57587d);
+  outline: 2px solid var(--color-night, #15195a);
+}
+
+.vds-btn-icon--light--tiny:focus:not(:disabled):not(:active):not(.vds-btn-icon--light--tiny-state--disabled):not(.vds-btn-icon--light--tiny-state--active) .vds-btn--svg,
+.vds-btn-icon--light--tiny-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light--tiny-state--disabled):not(.vds-btn-icon--light--tiny-state--active) .vds-btn--svg {
+  fill: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light--tiny:active,
+.vds-btn-icon--light--tiny-state--active {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-icon--light--tiny:active .vds-btn--svg,
+.vds-btn-icon--light--tiny-state--active .vds-btn--svg {
+  fill: var(--color-white, #ffffff);
+}
+
+.vds-btn-icon--light--tiny:disabled,
+.vds-btn-icon--light--tiny-state--disabled {
+  background-color: var(--color-white, #ffffff);
+  outline: 0;
+  pointer-events: none;
+}
+
+.vds-btn-icon--light--tiny:disabled .vds-btn--svg,
+.vds-btn-icon--light--tiny-state--disabled .vds-btn--svg {
+  fill: var(--color-smoke, #d7d7de);
+}
+
+
+/* 
+  Primary Menu button
+*/
+
+.vds-btn-menu--primary {
+  align-items: center;
+  appearance: none;
+  background-color: var(--color-blue, #003ea9);
+  border-radius: 2px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  color: var(--color-white, #ffffff);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 40px;
+  min-width: 64px;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+}
+
+.vds-btn-menu--primary .vds-btn--svg {
+  border-left: 1px solid var(--color-white, #ffffff);
+  fill: var(--color-white, #ffffff);
+  height: 16px;
+  padding: 4px 0;
+  width: 40px;
+}
+
+html[dir='rtl'] .vds-btn-menu--primary .vds-btn--svg,
+.vds-btn-menu--primary .vds-btn--svg:first-child {
+  border-left: 0;
+  border-right: 1px solid var(--color-white, #ffffff);
+}
+
+.vds-btn-menu--primary .vds-btn--label {
+  padding: 0 16px;
+}
+
+.vds-btn-menu--primary:hover,
+.vds-btn-menu--primary-state--hover {
+  background-color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-menu--primary:focus:not(:disabled):not(:active):not(.vds-btn-menu--primary-state--disabled):not(.vds-btn-menu--primary-state--active),
+.vds-btn-menu--primary-state--focus:not(:disabled):not(:active):not(.vds-btn-menu--primary-state--disabled):not(.vds-btn-menu--primary-state--active) {
+  background-color: var(--color-light-blue, #0051dc);
+  border: 2px solid var(--color-night, #15195a);
+  text-decoration: underline;
+}
+
+.vds-btn-menu--primary:active,
+.vds-btn-menu--primary-state--active {
+  background-color: var(--color-ice, #e0eafa);
+  border-color: var(--color-light-blue, #0051dc);
+  color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-menu--primary:active .vds-btn--svg,
+.vds-btn-menu--primary-state--active .vds-btn--svg {
+  border-left: 0;
+  border-right: 1px solid var(--color-light-blue, #0051dc);
+  fill: var(--color-light-blue, #0051dc);
+  transform: rotate(180deg);
+}
+
+html[dir='rtl'] .vds-btn-menu--primary:active .vds-btn--svg:last-child,
+.vds-btn-menu--primary:active .vds-btn--svg:first-child,
+.vds-btn-menu--primary-state--active .vds-btn--svg:first-child {
+  border-right: 0;
+  border-left: 1px solid var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-menu--primary:disabled,
+.vds-btn-menu--primary-state--disabled {
+  background-color: var(--color-smoke, #d7d7de);
+  pointer-events: none;
+}
+
+/* 
+  Secondary Menu button
+*/
+
+.vds-btn-menu--secondary {
+  align-items: center;
+  appearance: none;
+  background-color: var(--color-white, #ffffff);
+  border-radius: 2px;
+  border: 2px solid var(--color-blue, #003ea9);
+  box-sizing: border-box;
+  color: var(--color-blue, #003ea9);
+  cursor: default;
+  display: inline-flex;
+  flex-direction: row;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-stretch: 100%;
+  justify-content: center;
+  letter-spacing: .05357rem;
+  margin: 4px;
+  min-height: 40px;
+  min-width: 64px;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: background .25s ease;
+  user-select: none;
+  white-space: pre;
+}
+
+.vds-btn-menu--secondary .vds-btn--svg {
+  border-left: 1px solid var(--color-blue, #003ea9);
+  fill: var(--color-blue, #003ea9);
+  height: 16px;
+  padding: 4px 0;
+  margin: 0;
+  width: 40px;
+}
+
+.vds-btn-menu--secondary .vds-btn--label {
+  margin: 0;
+}
+
+html[dir='rtl'] .vds-btn-menu--secondary .vds-btn--svg,
+.vds-btn-menu--secondary .vds-btn--svg:first-child {
+  border-left: 0;
+  border-right: 1px solid var(--color-blue, #003ea9);
+}
+
+.vds-btn-menu--secondary .vds-btn--label {
+  padding: 0 16px;
+}
+
+.vds-btn-menu--secondary:hover,
+.vds-btn-menu--secondary-state--hover {
+  background-color: var(--color-ice, #57587d);
+  border-color: var(--color-light-blue, #0051dc);
+  color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-menu--secondary:focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active),
+.vds-btn-menu--secondary-state--focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active) {
+  background-color: var(--color-ice, #57587d);
+  border-color: var(--color-night, #15195a);
+  color: var(--color-light-blue, #0051dc);
+  text-decoration: underline;
+}
+
+.vds-btn-menu--secondary:active,
+.vds-btn-menu--secondary-state--active {
+  background-color: var(--color-ice, #e0eafa);
+  border-color: var(--color-light-blue, #0051dc);
+  color: var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-menu--secondary:active .vds-btn--svg,
+.vds-btn-menu--secondary-state--active .vds-btn--svg {
+  border-left: 0;
+  border-right: 1px solid var(--color-light-blue, #0051dc);
+  fill: var(--color-light-blue, #0051dc);
+  transform: rotate(180deg);
+}
+
+html[dir='rtl'] .vds-btn-menu--secondary:active .vds-btn--svg:last-child,
+.vds-btn-menu--secondary:active .vds-btn--svg:first-child,
+.vds-btn-menu--secondary-state--active .vds-btn--svg:first-child {
+  border-right: 0;
+  border-left: 1px solid var(--color-light-blue, #0051dc);
+}
+
+.vds-btn-menu--secondary:disabled,
+.vds-btn-menu--secondary-state--disabled {
+  background-color: var(--color-smoke, #d7d7de);
+  border-color: transparent;
+  color: var(--color-white, #ffffff);
+  pointer-events: none;
+}
+
+html[dir='rtl'] .vds-btn-menu--secondary:disabled .vds-btn--svg,
+html[dir='rtl'] .vds-btn-menu--secondary-state--disabled .vds-btn--svg,
+.vds-btn-menu--secondary:disabled .vds-btn--svg,
+.vds-btn-menu--secondary-state--disabled .vds-btn--svg {
+  fill: var(--color-white, #ffffff);
+  border-color: var(--color-white, #ffffff);
+}
+
+/* 
+  Button reset
+*/
+
+.vds-btn-text--primary::-moz-focus-inner,
+.vds-btn-text--secondary::-moz-focus-inner,
+.vds-btn-text--tertiary::-moz-focus-inner,
+.vds-btn-icon--light::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+html[dir='rtl'] .vds-btn-text--primary .vds-btn--label:first-child,
+html[dir='rtl'] .vds-btn-text--primary .vds-btn--svg:first-child,
+html[dir='rtl'] .vds-btn-text--secondary .vds-btn--label:first-child,
+html[dir='rtl'] .vds-btn-text--secondary .vds-btn--svg:first-child,
+html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--label:first-child,
+html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--svg:first-child
+.vds-btn-text--primary .vds-btn--label:last-child,
+.vds-btn-text--primary .vds-btn--svg:last-child,
+.vds-btn-text--secondary .vds-btn--label:last-child,
+.vds-btn-text--secondary .vds-btn--svg:last-child,
+.vds-btn-text--tertiary .vds-btn--label:last-child,
+.vds-btn-text--tertiary .vds-btn--svg:last-child {
+  margin-left: 4px;
+}
+
+html[dir='rtl'] .vds-btn-text--primary .vds-btn--label:last-child,
+html[dir='rtl'] .vds-btn-text--primary .vds-btn--svg:last-child,
+html[dir='rtl'] .vds-btn-text--secondary .vds-btn--label:last-child,
+html[dir='rtl'] .vds-btn-text--secondary .vds-btn--svg:last-child,
+html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--label:last-child,
+html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--svg:last-child {
+  margin-left: 0;
 }

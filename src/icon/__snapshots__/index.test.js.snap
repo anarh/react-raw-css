@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<svg
+  aria-hidden={true}
+  aria-label={undefined}
+  className="visa-ui-icon--low"
+  focusable="false"
+  role={undefined}
+  tabIndex={-1}
+  viewBox="0 0 24 24"
+>
+  <use
+    href="#search--low"
+    xlinkHref="#search--low"
+  />
+</svg>
+`;
+
+exports[` 2`] = `
+<svg
+  aria-hidden={true}
+  aria-label={undefined}
+  className="visa-ui-icon--high"
+  focusable="false"
+  role={undefined}
+  tabIndex={-1}
+  viewBox="0 0 48 48"
+>
+  <use
+    href="#search--high"
+    xlinkHref="#search--high"
+  />
+</svg>
+`;
+
+exports[` 3`] = `
+<svg
+  aria-hidden={true}
+  aria-label={undefined}
+  className="visa-ui-icon--tiny"
+  focusable="false"
+  role={undefined}
+  tabIndex={-1}
+  viewBox="0 0 16 16"
+>
+  <use
+    href="#search--tiny"
+    xlinkHref="#search--tiny"
+  />
+</svg>
+`;

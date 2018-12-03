@@ -1,0 +1,13 @@
+{
+  "name": "icon",
+  "last-accessibility-review": {
+    "commit-sha": "",
+    "date-iso-8601": ""
+  },
+  "last-vds-markup-review": {
+    "commit-sha": "",
+    "date-iso-8601": ""
+  },
+  "vds-react-guidelines": "http://ux/projects/visa-ui-angular/Hamlet-2-1/Iconography.pdf",
+  "vds-react-status": "ready"
+}
