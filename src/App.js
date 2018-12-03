@@ -21,6 +21,23 @@ class App extends Component {
         <button disabled className={`vds-btn-text--primary vds-btn--fullwidth`}>FULL WIDTH PRIMARY DISABLED</button>
         <button disabled className={`vds-btn-text--secondary vds-btn--fullwidth`}>FULL WIDTH SECONDARY DISABLED</button>
         <button disabled className={`vds-btn-text--tertiary vds-btn--fullwidth`}>FULL WIDTH TERTIARY DISABLED</button>
+        <h2>Menu</h2>
+        <button className="vds-btn-menu--primary">
+          <span className="vds-btn--label">MENU PRIMARY</span>
+          <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
+        </button>
+        <button disabled className="vds-btn-menu--primary">
+          <span className="vds-btn--label">MENU PRIMARY DISABLED</span>
+          <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
+        </button>
+        <button className="vds-btn-menu--secondary">
+          <span className="vds-btn--label">MENU SECONDARY</span>
+          <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
+        </button>
+        <button disabled className="vds-btn-menu--secondary">
+          <span className="vds-btn--label">MENU SECONDARY DISABLED</span>
+          <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
+        </button>
         <button className={`vds-btn-text--primary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" role="img" />
           <span className="vds-btn--label">ICON PRIMARY</span>
@@ -108,24 +125,6 @@ class App extends Component {
         </button>
         <button disabled className="vds-btn-icon--light--tiny" type="button">
           <Icon name="close" className="vds-btn--svg" resolution="tiny" />
-        </button>
-
-        <h2>Menu</h2>
-        <button className="vds-btn-menu--primary">
-          <span className="vds-btn--label">MENU PRIMARY</span>
-          <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
-        </button>
-        <button disabled className="vds-btn-menu--primary">
-          <span className="vds-btn--label">MENU PRIMARY DISABLED</span>
-          <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
-        </button>
-        <button className="vds-btn-menu--secondary">
-          <span className="vds-btn--label">MENU SECONDARY</span>
-          <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
-        </button>
-        <button disabled className="vds-btn-menu--secondary">
-          <span className="vds-btn--label">MENU SECONDARY DISABLED</span>
-          <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
         </button>
 
         <h2>Miscellaneous/Tests</h2>
