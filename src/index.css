@@ -842,12 +842,6 @@ html[dir='rtl'] .vds-btn-menu--secondary-state--disabled .vds-btn--svg,
   padding: 0;
 }
 
-html[dir='rtl'] .vds-btn-text--primary .vds-btn--label:first-child,
-html[dir='rtl'] .vds-btn-text--primary .vds-btn--svg:first-child,
-html[dir='rtl'] .vds-btn-text--secondary .vds-btn--label:first-child,
-html[dir='rtl'] .vds-btn-text--secondary .vds-btn--svg:first-child,
-html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--label:first-child,
-html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--svg:first-child
 .vds-btn-text--primary .vds-btn--label:last-child,
 .vds-btn-text--primary .vds-btn--svg:last-child,
 .vds-btn-text--secondary .vds-btn--label:last-child,
@@ -855,6 +849,7 @@ html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--svg:first-child
 .vds-btn-text--tertiary .vds-btn--label:last-child,
 .vds-btn-text--tertiary .vds-btn--svg:last-child {
   margin-left: 4px;
+  margin-right: 0;
 }
 
 html[dir='rtl'] .vds-btn-text--primary .vds-btn--label:last-child,
@@ -864,4 +859,5 @@ html[dir='rtl'] .vds-btn-text--secondary .vds-btn--svg:last-child,
 html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--label:last-child,
 html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--svg:last-child {
   margin-left: 0;
+  margin-right: 4px;
 }
