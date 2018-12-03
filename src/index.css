@@ -63,6 +63,7 @@ body {
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 40px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
@@ -73,8 +74,8 @@ body {
   text-decoration: none;
   transition: background .25s ease;
   user-select: none;
-  white-space: pre;
   vertical-align: middle;
+  white-space: pre;
 }
 
 .vds-btn--svg {
@@ -122,6 +123,7 @@ body {
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 40px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
@@ -132,8 +134,8 @@ body {
   text-decoration: none;
   transition: background .25s ease;
   user-select: none;
-  white-space: pre;
   vertical-align: middle;
+  white-space: pre;
 }
 
 .vds-btn-text--secondary .vds-btn--svg {
@@ -208,6 +210,7 @@ body {
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 40px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
@@ -218,8 +221,8 @@ body {
   text-decoration: none;
   transition: background .25s ease;
   user-select: none;
-  white-space: pre;
   vertical-align: middle;
+  white-space: pre;
 }
 
 .vds-btn-text--tertiary .vds-btn--svg {
@@ -284,6 +287,7 @@ body {
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 48px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
@@ -294,8 +298,8 @@ body {
   text-decoration: none;
   transition: background .25s ease;
   user-select: none;
-  white-space: pre;
   vertical-align: middle;
+  white-space: pre;
 }
 
 .vds-btn-icon--dark:hover,
@@ -343,6 +347,7 @@ body {
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 32px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
@@ -353,8 +358,8 @@ body {
   text-decoration: none;
   transition: background .25s ease;
   user-select: none;
-  white-space: pre;
   vertical-align: middle;
+  white-space: pre;
 }
 
 .vds-btn-icon--dark--tiny .vds-btn--svg {
@@ -408,6 +413,7 @@ body {
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 48px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
@@ -418,8 +424,8 @@ body {
   text-decoration: none;
   transition: background .25s ease;
   user-select: none;
-  white-space: pre;
   vertical-align: middle;
+  white-space: pre;
 }
 
 .vds-btn-icon--light .vds-btn--svg {
@@ -487,6 +493,7 @@ body {
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 48px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
@@ -497,8 +504,8 @@ body {
   text-decoration: none;
   transition: background .25s ease;
   user-select: none;
-  white-space: pre;
   vertical-align: middle;
+  white-space: pre;
 }
 
 .vds-btn-icon--light--outline .vds-btn--svg {
@@ -569,6 +576,7 @@ body {
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 32px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
@@ -579,8 +587,8 @@ body {
   text-decoration: none;
   transition: background .25s ease;
   user-select: none;
-  white-space: pre;
   vertical-align: middle;
+  white-space: pre;
 }
 
 .vds-btn-icon--light--tiny .vds-btn--svg {
@@ -652,6 +660,7 @@ body {
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 40px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
@@ -741,6 +750,7 @@ html[dir='rtl'] .vds-btn-menu--primary:active .vds-btn--svg:last-child,
   font-family: 'OpenSans';
   font-size: 14px;
   font-stretch: 100%;
+  height: 40px;
   justify-content: center;
   letter-spacing: .05357rem;
   margin: 4px;
