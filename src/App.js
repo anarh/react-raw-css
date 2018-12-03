@@ -133,9 +133,9 @@ class App extends Component {
         <input className="vds-btn-text--primary" type="submit" value="input[type=&quot;submit&quot;]" />
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat tellus. Donec sagittis mi quam, a ultricies est viverra et. Ut pharetra, nunc et luctus luctus, justo massa varius m<input className="vds-btn-text--primary" type="reset" value="input[type=&quot;reset&quot;]" />
         <input className="vds-btn-text--primary" type="button" value="input[type=&quot;button&quot;]" />
-        <a className="vds-btn-text--primary" role="button" href="/home">a [role="button"]</a>
+        <a className="vds-btn-text--primary" role="button" href="/">a [role="button"]</a>
          ipsum at dolor malesuada maximus eget ut arcu. Aliquam erat volutpat. Praesent pretium magna vulputate mauris dapibus, nec commodo orci scelerisque.
-        <span className={`vds-btn-text--primary vds-btn-text--primary-state--disabled`} role="button" tabIndex={0}>span[role="button"]</span>
+        <span className={`vds-btn-text--primary vds-btn-text--primary-state--disabled`} tabIndex={-1} role="button">span[role="button"]</span>
         <div className="vds-btn-text--primary" role="button" tabIndex={0}>div[role="button"]</div>
         <button disabled className="vds-btn-text--primary">Text Primary</button>
         Suspendisse bibendum consequat tellus,<button className="vds-btn-text--primary" type="button">button[type="button"]</button>
@@ -145,7 +145,7 @@ class App extends Component {
         <input className="vds-btn-text--primary" type="submit" value="input[type=&quot;submit&quot;]" />
         <input className="vds-btn-text--primary" type="reset" value="input[type=&quot;reset&quot;]" />
         <input className="vds-btn-text--primary" type="button" value="input[type=&quot;button&quot;]" />
-        <a className={`vds-btn-text--primary vds-btn-text--primary-state--disabled`} role="button" href="/home">a[role="button"]</a>
+        <a className={`vds-btn-text--primary vds-btn-text--primary-state--disabled`} tabIndex={-1} role="button" href="/">a[role="button"]</a>
         <span className="vds-btn-text--primary" role="button" tabIndex={0}>span[role="button"]</span>
         <div className="vds-btn-text--primary" role="button" tabIndex={0}>div[role="button"]</div>
         <button disabled className="vds-btn-menu--primary">
@@ -157,15 +157,15 @@ class App extends Component {
         <input className="vds-btn-text--secondary" type="submit" value="input[type=&quot;submit&quot;]" />
         <input className="vds-btn-text--secondary" type="reset" value="input[type=&quot;reset&quot;]" />
         <input className="vds-btn-text--secondary" type="button" value="input[type=&quot;button&quot;]" />
-        <a className="vds-btn-text--secondary" role="button" href="/home">a [role="button"]</a>
-        <span className={`vds-btn-text--secondary vds-btn-text--secondary-state--disabled`} role="button" tabIndex={0}>span[role="button"]</span>
+        <a className="vds-btn-text--secondary" role="button" href="/">a [role="button"]</a>
+        <span className={`vds-btn-text--secondary vds-btn-text--secondary-state--disabled`} tabIndex={-1} role="button">span[role="button"]</span>
         <div className="vds-btn-text--secondary" role="button" tabIndex={0}>div[role="button"]</div>
         <button disabled className="vds-btn-text--secondary">Text Primary</button>
         <button className="vds-btn-text--secondary" type="button">button[type="button"]</button>
         <input className="vds-btn-text--secondary" type="submit" value="input[type=&quot;submit&quot;]" />
         agittis blandit. Fusce porttitor ante luctus, tempor enim vel, pharetra leo. Mauris id est augue. Cras ultricies feugiat tellus. Integer non ipsum at dolor malesuada maximus <input className="vds-btn-text--secondary" type="reset" value="input[type=&quot;reset&quot;]" />
         <input className="vds-btn-text--secondary" type="button" value="input[type=&quot;button&quot;]" />
-        <a className={`vds-btn-text--secondary vds-btn-text--secondary-state--disabled`} role="button" href="/home">a[role="button"]</a>
+        <a className={`vds-btn-text--secondary vds-btn-text--secondary-state--disabled`} tabIndex={-1} role="button" href="/">a[role="button"]</a>
         <span className="vds-btn-text--secondary" role="button" tabIndex={0}>span[role="button"]</span>
         <div className="vds-btn-text--secondary" role="button" tabIndex={0}>div[role="button"]</div>
         <button className="vds-btn-text--tertiary">TERTIARY</button>
@@ -177,15 +177,15 @@ class App extends Component {
         <input className="vds-btn-text--tertiary" type="submit" value="input[type=&quot;submit&quot;]" />
         <input className="vds-btn-text--tertiary" type="reset" value="input[type=&quot;reset&quot;]" />
         <input className="vds-btn-text--tertiary" type="button" value="input[type=&quot;button&quot;]" />
-        <a className="vds-btn-text--tertiary" role="button" href="/home">a [role="button"]</a>Vestibulum accumsan auctor arcu, id tempus dolor congue vitae. Phase
-        <span className={`vds-btn-text--tertiary vds-btn-text--tertiary-state--disabled`} role="button" tabIndex={0}>span[role="button"]</span>
+        <a className="vds-btn-text--tertiary" role="button" href="/">a [role="button"]</a>Vestibulum accumsan auctor arcu, id tempus dolor congue vitae. Phase
+        <span className={`vds-btn-text--tertiary vds-btn-text--tertiary-state--disabled`} tabIndex={-1} role="button">span[role="button"]</span>
         <div className="vds-btn-text--tertiary" role="button" tabIndex={0}>div[role="button"]</div>
         <button disabled className="vds-btn-text--tertiary">Text Primary</button>quam tortor, consequat sit amet dictum vitae, sollicitudin vitae est. Vestibulum dictum sed quam sed efficitur. Ut non leo eu quam finibus viverra. Don
         <button className="vds-btn-text--tertiary" type="button">button[type="button"]</button>
         <input className="vds-btn-text--tertiary" type="submit" value="input[type=&quot;submit&quot;]" />
         <input className="vds-btn-text--tertiary" type="reset" value="input[type=&quot;reset&quot;]" />
         <input className="vds-btn-text--tertiary" type="button" value="input[type=&quot;button&quot;]" />
-        <a className={`vds-btn-text--tertiary vds-btn-text--tertiary-state--disabled`} role="button" href="/home">a[role="button"]</a>
+        <a className={`vds-btn-text--tertiary vds-btn-text--tertiary-state--disabled`} tabIndex={-1} role="button" href="/">a[role="button"]</a>
         <span className="vds-btn-text--tertiary" role="button" tabIndex={0}>span[role="button"]</span>
         <div className="vds-btn-text--tertiary" role="button" tabIndex={0}>div[role="button"]</div>
         <button className={`vds-btn-text--primary`}>
@@ -238,10 +238,10 @@ class App extends Component {
         <button className="vds-btn-icon--dark" type="button">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </button>Suspendisse et tempor sapien. Fusce vitae fringilla 
-        <a className="vds-btn-icon--dark" role="button" href="/home">
+        <a className="vds-btn-icon--dark" role="button" href="/">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </a>
-        <span className={`vds-btn-icon--dark vds-btn-icon--dark-state--disabled`} role="button" tabIndex={0}>
+        <span className={`vds-btn-icon--dark vds-btn-icon--dark-state--disabled`} tabIndex={-1} role="button">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </span>
         <div className="vds-btn-icon--dark" role="button" tabIndex={0}>
@@ -253,10 +253,10 @@ class App extends Component {
         <button className="vds-btn-icon--dark--tiny" type="button">
           <Icon name="close" className="vds-btn--svg" resolution="tiny" />
         </button>
-        <a className="vds-btn-icon--dark--tiny" role="button" href="/home">
+        <a className="vds-btn-icon--dark--tiny" role="button" href="/">
           <Icon name="close" className="vds-btn--svg" resolution="tiny" />
         </a>
-        <span className={`vds-btn-icon--dark--tiny vds-btn-icon--dark--tiny-state--disabled`} role="button" tabIndex={0}>
+        <span className={`vds-btn-icon--dark--tiny vds-btn-icon--dark--tiny-state--disabled`} tabIndex={-1} role="button">
           <Icon name="close" className="vds-btn--svg" resolution="tiny" />
         </span>
         <div className="vds-btn-icon--dark--tiny" role="button" tabIndex={0}>
@@ -265,10 +265,10 @@ class App extends Component {
         <button className="vds-btn-icon--light" type="button">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </button>
-        <a className="vds-btn-icon--light" role="button" href="/home">
+        <a className="vds-btn-icon--light" role="button" href="/">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </a>
-        <span className={`vds-btn-icon--light vds-btn-icon--light-state--disabled`} role="button" tabIndex={0}>
+        <span className={`vds-btn-icon--light vds-btn-icon--light-state--disabled`} tabIndex={-1} role="button">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </span>
         <div className="vds-btn-icon--light" role="button" tabIndex={0}>
@@ -281,10 +281,10 @@ class App extends Component {
         <button className="vds-btn-icon--light--outline" type="button">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </button>
-        <a className="vds-btn-icon--light--outline" role="button" href="/home">
+        <a className="vds-btn-icon--light--outline" role="button" href="/">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </a>
-        <span className={`vds-btn-icon--light--outline vds-btn-icon--light--outline-state--disabled`} role="button" tabIndex={0}>
+        <span className={`vds-btn-icon--light--outline vds-btn-icon--light--outline-state--disabled`} tabIndex={-1} role="button">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </span>
         <div className="vds-btn-icon--light--outline" role="button" tabIndex={0}>
@@ -298,10 +298,10 @@ class App extends Component {
           <Icon name="close" className="vds-btn--svg" resolution="tiny" />
         </button>
         teger non ipsum at dolor malesuada maximu
-        <a className="vds-btn-icon--light--tiny" role="button" href="/home">
+        <a className="vds-btn-icon--light--tiny" role="button" href="/">
           <Icon name="close" className="vds-btn--svg" resolution="tiny" />
         </a>
-        <span className={`vds-btn-icon--light--tiny vds-btn-icon--light--tiny-state--disabled`} role="button" tabIndex={0}>
+        <span className={`vds-btn-icon--light--tiny vds-btn-icon--light--tiny-state--disabled`} tabIndex={-1} role="button">
           <Icon name="close" className="vds-btn--svg" resolution="tiny" />
         </span>
         <div className="vds-btn-icon--light--tiny" role="button" tabIndex={0}>
