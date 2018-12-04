@@ -57,7 +57,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   color: var(--color-white, #ffffff);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
@@ -117,7 +117,7 @@ body {
   border: 2px solid var(--color-blue, #003ea9);
   box-sizing: border-box;
   color: var(--color-blue, #003ea9);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
@@ -204,7 +204,7 @@ body {
   border: 1px dashed rgba(0, 0, 0, 0);
   box-sizing: border-box;
   color: var(--color-light-blue, #0051dc);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
@@ -281,7 +281,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   color: var(--color-white, #ffffff);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
@@ -341,7 +341,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   color: var(--color-white, #ffffff);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
@@ -407,7 +407,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   color: var(--color-white, #ffffff);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
@@ -487,7 +487,7 @@ body {
   border: 2px solid var(--color-blue, #003ea9);;
   box-sizing: border-box;
   color: var(--color-white, #ffffff);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
@@ -570,7 +570,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   color: var(--color-white, #ffffff);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
@@ -654,7 +654,7 @@ body {
   border: 2px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   color: var(--color-white, #ffffff);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
@@ -744,7 +744,7 @@ html[dir='rtl'] .vds-btn-menu--primary:active .vds-btn--svg:last-child,
   border: 2px solid var(--color-blue, #003ea9);
   box-sizing: border-box;
   color: var(--color-blue, #003ea9);
-  cursor: default;
+  cursor: pointer;
   display: inline-flex;
   flex-direction: row;
   font-family: 'OpenSans';
