@@ -9,82 +9,82 @@ class App extends Component {
       <div onTouchStart={() => null}>
         <button className={`vds-btn-text--tertiary`} onClick={(e) => document.dir = document.dir === 'rtl' ? 'ltr' : 'rtl'}>Toggle Right to Left Support</button>
         <h2>Text</h2>
-        <button className="vds-btn-text--primary">PRIMARY</button>
-        <button disabled className="vds-btn-text--primary">PRIMARY DISABLED</button>
-        <button className="vds-btn-text--secondary">SECONDARY</button>
-        <button disabled className="vds-btn-text--secondary">SECONDARY DISABLED</button>
-        <button className="vds-btn-text--tertiary">TERTIARY</button>
-        <button disabled className="vds-btn-text--tertiary">TERTIARY DISABLED</button>
-        <button className={`vds-btn-text--primary vds-btn--fullwidth`}>FULL WIDTH PRIMARY</button>
-        <button className={`vds-btn-text--secondary vds-btn--fullwidth`}>FULL WIDTH SECONDARY</button>
-        <button className={`vds-btn-text--tertiary vds-btn--fullwidth`}>FULL WIDTH TERTIARY</button>
-        <button disabled className={`vds-btn-text--primary vds-btn--fullwidth`}>FULL WIDTH PRIMARY DISABLED</button>
-        <button disabled className={`vds-btn-text--secondary vds-btn--fullwidth`}>FULL WIDTH SECONDARY DISABLED</button>
-        <button disabled className={`vds-btn-text--tertiary vds-btn--fullwidth`}>FULL WIDTH TERTIARY DISABLED</button>
+        <button className="vds-btn-text--primary">Primary</button>
+        <button disabled className="vds-btn-text--primary">Primary Disabled</button>
+        <button className="vds-btn-text--secondary">Secondary</button>
+        <button disabled className="vds-btn-text--secondary">Secondary Disabled</button>
+        <button className="vds-btn-text--tertiary">Tertiary</button>
+        <button disabled className="vds-btn-text--tertiary">Tertiary Disabled</button>
+        <button className={`vds-btn-text--primary vds-btn--fullwidth`}>Full Width Primary</button>
+        <button className={`vds-btn-text--secondary vds-btn--fullwidth`}>Full Width Secondary</button>
+        <button className={`vds-btn-text--tertiary vds-btn--fullwidth`}>Full Width Tertiary</button>
+        <button disabled className={`vds-btn-text--primary vds-btn--fullwidth`}>Full Width Primary Disabled</button>
+        <button disabled className={`vds-btn-text--secondary vds-btn--fullwidth`}>Full Width Secondary Disabled</button>
+        <button disabled className={`vds-btn-text--tertiary vds-btn--fullwidth`}>Full Width Tertiary Disabled</button>
         <h2>Menu</h2>
         <button className="vds-btn-menu--primary">
-          <span className="vds-btn--label">MENU PRIMARY</span>
+          <span className="vds-btn--label">MENU Primary</span>
           <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
         </button>
         <button disabled className="vds-btn-menu--primary">
-          <span className="vds-btn--label">MENU PRIMARY DISABLED</span>
+          <span className="vds-btn--label">Menu Primary Disabled</span>
           <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
         </button>
         <button className="vds-btn-menu--secondary">
-          <span className="vds-btn--label">MENU SECONDARY</span>
+          <span className="vds-btn--label">MENU Secondary</span>
           <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
         </button>
         <button disabled className="vds-btn-menu--secondary">
-          <span className="vds-btn--label">MENU SECONDARY DISABLED</span>
+          <span className="vds-btn--label">Menu Secondary Disabled</span>
           <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
         </button>
         <button className={`vds-btn-text--primary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" role="img" />
-          <span className="vds-btn--label">ICON PRIMARY</span>
+          <span className="vds-btn--label">ICON Primary</span>
         </button>
         <button className={`vds-btn-text--secondary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON SECONDARY</span>
+          <span className="vds-btn--label">ICON Secondary</span>
         </button>
         <button className={`vds-btn-text--tertiary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON TERTIARY</span>
+          <span className="vds-btn--label">ICON Tertiary</span>
         </button>
         <button disabled className={`vds-btn-text--primary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON PRIMARY DISABLED</span>
+          <span className="vds-btn--label">Icon Primary Disabled</span>
         </button>
         <button disabled className={`vds-btn-text--secondary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON SECONDARY DISABLED</span>
+          <span className="vds-btn--label">Icon Secondary Disabled</span>
         </button>
         <button disabled className={`vds-btn-text--tertiary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON TERTIARY DISABLED</span>
+          <span className="vds-btn--label">Icon Tertiary Disabled</span>
         </button>
         <button className={`vds-btn-text--primary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON PRIMARY FULL WIDTH</span>
+          <span className="vds-btn--label">Icon Primary Full Width</span>
         </button>
         <button className={`vds-btn-text--secondary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON SECONDARY FULL WIDTH</span>
+          <span className="vds-btn--label">Icon Secondary Full Width</span>
         </button>
         <button className={`vds-btn-text--tertiary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON TERTIARY FULL WIDTH</span>
+          <span className="vds-btn--label">Icon Tertiary Full Width</span>
         </button>
         <button disabled className={`vds-btn-text--primary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON PRIMARY FULL WIDTH DISABLED</span>
+          <span className="vds-btn--label">Icon Primary Full Width Disabled</span>
         </button>
         <button disabled className={`vds-btn-text--secondary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON SECONDARY FULL WIDTH DISABLED</span>
+          <span className="vds-btn--label">Icon Secondary Full Width Disabled</span>
         </button>
         <button disabled className={`vds-btn-text--tertiary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">ICON TERTIARY FULL WIDTH DISABLED</span>
+          <span className="vds-btn--label">Icon Tertiary Full Width Disabled</span>
         </button>
 
         <h2>Icon Dark</h2>
@@ -150,7 +150,7 @@ class App extends Component {
         <span className="vds-btn-text--primary" role="button" tabIndex={0}>span[role="button"]</span>
         <div className="vds-btn-text--primary" role="button" tabIndex={0}>div[role="button"]</div>
         <button disabled className="vds-btn-menu--primary">
-          <span className="vds-btn--label">DEFAULT</span>
+          <span className="vds-btn--label">Default</span>
           <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
         </button>
         <button className="vds-btn-text--secondary" type="button">button[type="button"]</button>
@@ -170,10 +170,10 @@ class App extends Component {
         <a className={`vds-btn-text--secondary vds-btn-text--secondary-state--disabled`} tabIndex={-1} role="button" href="/">a[role="button"]</a>
         <span className="vds-btn-text--secondary" role="button" tabIndex={0}>span[role="button"]</span>
         <div className="vds-btn-text--secondary" role="button" tabIndex={0}>div[role="button"]</div>
-        <button className="vds-btn-text--tertiary">TERTIARY</button>
+        <button className="vds-btn-text--tertiary">Tertiary</button>
         <button disabled className={`vds-btn-text--secondary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">SECONDARY</span>
+          <span className="vds-btn--label">Secondary</span>
         </button>
         <span>Praesent congue laoreet velit ut tincidunt. Nulla dignissim lacus in tempor posuere. Etia</span>
         <button className="vds-btn-text--tertiary" type="button">button[type="button"]</button>
@@ -196,52 +196,52 @@ class App extends Component {
         <div className="vds-btn-text--tertiary" role="button" tabIndex={0}>div[role="button"]</div>
         <button className={`vds-btn-text--primary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" role="img" />
-          <span className="vds-btn--label">PRIMARY</span>
+          <span className="vds-btn--label">Primary</span>
         </button>
         <span>Sed dapibus arcu dolor, a mollis nunc pulvinar at. Sed vitae hendrerit magna. Curabitur sed ante eget lacus hendrerit placerat at sit amet sapien. Donec luctus scelerisque venenati</span>
         <button className={`vds-btn-text--secondary`}>
-          <span className="vds-btn--label">SECONDARY</span>
+          <span className="vds-btn--label">Secondary</span>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
         </button>
         <button className={`vds-btn-text--tertiary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">TERTIARY</span>
+          <span className="vds-btn--label">Tertiary</span>
         </button>
         <span>estibulum accumsan auctor arcu, id tempus dolor congue vitae. Phasellus quam tortor, consequat sit amet dictum vitae, sollicitudin vitae est. Vestibulum dictum sed quam sed efficitur. Ut non leo eu quam finibus viverra. Donec faucibus nibh tellus, sit amet condimentum sem pellentesque malesuada. Interd</span>
         <button disabled className={`vds-btn-text--primary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">PRIMARY</span>
+          <span className="vds-btn--label">Primary</span>
         </button>
         <button disabled className={`vds-btn-text--secondary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">SECONDARY</span>
+          <span className="vds-btn--label">Secondary</span>
         </button>
         <span>Etiam gravida lectus vitae risus facilisis, ut commodo lacus sollicitudin.</span>
         <button disabled className={`vds-btn-text--tertiary`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">TERTIARY</span>
+          <span className="vds-btn--label">Tertiary</span>
         </button>
         <button className={`vds-btn-text--primary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">PRIMARY</span>
+          <span className="vds-btn--label">Primary</span>
         </button>
         <span>nunc, lacinia et scelerisque sit am</span>
         <button className={`vds-btn-text--secondary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">SECONDARY</span>
+          <span className="vds-btn--label">Secondary</span>
         </button>
         <button className={`vds-btn-text--tertiary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">TERTIARY</span>
+          <span className="vds-btn--label">Tertiary</span>
         </button>
         <button disabled className={`vds-btn-text--primary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">PRIMARY</span>
+          <span className="vds-btn--label">Primary</span>
         </button>
         <span>justo sit amet velit suscipit feugiat se</span>
         <button disabled className={`vds-btn-text--tertiary vds-btn--fullwidth`}>
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-          <span className="vds-btn--label">TERTIARY</span>
+          <span className="vds-btn--label">Tertiary</span>
         </button>
         <button className="vds-btn-icon--dark">
           <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
@@ -322,16 +322,16 @@ class App extends Component {
 
          <span>volutpat odio. Sed dapibus arcu dolor, a</span>
         <button className="vds-btn-menu--primary">
-          <span className="vds-btn--label">DEFAULT</span>
+          <span className="vds-btn--label">Default</span>
           <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
         </button>
         <button className="vds-btn-menu--secondary">
-          <span className="vds-btn--label">DEFAULT</span>
+          <span className="vds-btn--label">Default</span>
           <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
         </button> 
         <span>placerat at sit amet sapien. Donec luctus sceleri</span>
         <button disabled className="vds-btn-menu--secondary">
-          <span className="vds-btn--label">DEFAULT</span>
+          <span className="vds-btn--label">Default</span>
           <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
         </button>
         <div />
