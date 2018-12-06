@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import Icons from './icons';
 import Icon from './icon';
-import Avatar from './avatar';
 import './App.css';
 
 const theme = {
