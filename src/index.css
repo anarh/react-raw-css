@@ -747,7 +747,7 @@ h2 {
   appearance: none;
   background-color: var(--color-blue, #003ea9);
   border-radius: 2px;
-  border: 0;
+  border: 2px solid var(--color-transparent, rgba(0, 0, 0, 0));
   box-sizing: border-box;
   color: var(--color-white, #ffffff);
   cursor: pointer;

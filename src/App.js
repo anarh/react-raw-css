@@ -336,7 +336,7 @@ class App extends Component {
             <Icon name="close" className="vds-btn--svg" resolution="tiny" />
           </div>
 
-          <span>volutpat odio. Sed dapibus arcu dolor, a</span>
+           <span>volutpat odio. Sed dapibus arcu dolor, a</span>
           <button className="vds-btn-menu--primary">
             <span className="vds-btn--label">Default</span>
             <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
