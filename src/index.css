@@ -46,7 +46,7 @@ h2 {
   margin-left: 0;
   margin-right: 0;
 }
-
+/* non vds */
 .dark-background {
   background-color: #000000;
 }
@@ -54,6 +54,12 @@ h2 {
 .dark-background h2 {
   color: var(--color-white, #ffffff);
 }
+
+.checkbox-container {
+  margin: 10px;
+}
+
+/* end non vds */
 
 .vds-btn--svg {
   height: 24px;
@@ -160,7 +166,7 @@ h2 {
 
 .vds-btn-text--secondary:hover,
 .vds-btn-text--secondary-state--hover {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
   border-color: var(--color-light-blue, #0051dc);
   color: var(--color-light-blue, #0051dc);
 }
@@ -172,7 +178,7 @@ h2 {
 
 .vds-btn-text--secondary:focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active),
 .vds-btn-text--secondary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active) {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
   border-color: var(--color-light-blue, #0051dc);
   color: var(--color-light-blue, #0051dc);
   outline: 1px dashed var(--color-night, #15195a);
@@ -293,7 +299,7 @@ h2 {
   Icon button Dark
 */
 
-.vds-btn-icon--dark {
+.vds-btn-icon--light--fill {
   align-items: center;
   appearance: none;
   background-color: var(--color-blue, #003ea9);
@@ -322,30 +328,30 @@ h2 {
   white-space: pre;
 }
 
-.vds-btn-icon--dark:hover,
-.vds-btn-icon--dark-state--hover {
+.vds-btn-icon--light--fill:hover,
+.vds-btn-icon--light--fill-state--hover {
   background-color: var(--color-light-blue, #0051dc);
 }
 
-.vds-btn-icon--dark:focus:not(:disabled):not(:active):not(.vds-btn-icon--dark-state--disabled):not(.vds-btn-icon--dark-state--active),
-.vds-btn-icon--dark-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--dark-state--disabled):not(.vds-btn-icon--dark-state--active) {
-  outline: 1px dashed var(--color-white, #ffffff);
+.vds-btn-icon--light--fill:focus:not(:disabled):not(:active):not(.vds-btn-icon--light--fill-state--disabled):not(.vds-btn-icon--light--fill-state--active),
+.vds-btn-icon--light--fill-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light--fill-state--disabled):not(.vds-btn-icon--light--fill-state--active) {
+  outline: 1px dashed var(--color-night, #15195a);
 }
 
-.vds-btn-icon--dark:active,
-.vds-btn-icon--dark-state--active {
+.vds-btn-icon--light--fill:active,
+.vds-btn-icon--light--fill-state--active {
   background-color: var(--color-light-blue, #0051dc);
 }
 
-.vds-btn-icon--dark:disabled,
-.vds-btn-icon--dark-state--disabled {
+.vds-btn-icon--light--fill:disabled,
+.vds-btn-icon--light--fill-state--disabled {
   background-color: var(--color-transparent, rgba(0, 0, 0, 0));
   outline: 0;
   pointer-events: none;
 }
 
-.vds-btn-icon--dark:disabled .vds-btn--svg,
-.vds-btn-icon--dark-state--disabled .vds-btn--svg {
+.vds-btn-icon--light--fill:disabled .vds-btn--svg,
+.vds-btn-icon--light--fill-state--disabled .vds-btn--svg {
   fill: var(--color-smoke, #d7d7de);
 }
 
@@ -520,7 +526,7 @@ h2 {
 
 .vds-btn-icon--light:hover,
 .vds-btn-icon--light-state--hover {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
 }
 
 .vds-btn-icon--light:hover .vds-btn--svg,
@@ -530,7 +536,7 @@ h2 {
 
 .vds-btn-icon--light:focus:not(:disabled):not(:active):not(.vds-btn-icon--light-state--disabled):not(.vds-btn-icon--light-state--active),
 .vds-btn-icon--light-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light-state--disabled):not(.vds-btn-icon--light-state--active) {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
   outline: 1px dashed var(--color-night, #15195a);
 }
 
@@ -600,7 +606,7 @@ h2 {
 
 .vds-btn-icon--light--outline:hover,
 .vds-btn-icon--light--outline-state--hover {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
   border-color: var(--color-light-blue, #0051dc);
 }
 
@@ -611,7 +617,7 @@ h2 {
 
 .vds-btn-icon--light--outline:focus:not(:disabled):not(:active):not(.vds-btn-icon--light--outline-state--disabled):not(.vds-btn-icon--light--outline-state--active),
 .vds-btn-icon--light--outline-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light--outline-state--disabled):not(.vds-btn-icon--light--outline-state--active) {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
   outline: 1px dashed var(--color-night, #15195a);
   border-color: var(--color-transparent, rgba(0, 0, 0, 0));
 }
@@ -686,7 +692,7 @@ h2 {
 
 .vds-btn-icon--light--tiny:hover,
 .vds-btn-icon--light--tiny-state--hover {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
 }
 
 .vds-btn-icon--light--tiny:hover .vds-btn--svg,
@@ -696,7 +702,7 @@ h2 {
 
 .vds-btn-icon--light--tiny:focus:not(:disabled):not(:active):not(.vds-btn-icon--light--tiny-state--disabled):not(.vds-btn-icon--light--tiny-state--active),
 .vds-btn-icon--light--tiny-state--focus:not(:disabled):not(:active):not(.vds-btn-icon--light--tiny-state--disabled):not(.vds-btn-icon--light--tiny-state--active) {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
   outline: 1px dashed var(--color-night, #15195a);
 }
 
@@ -875,14 +881,14 @@ html[dir='rtl'] .vds-btn-menu--secondary .vds-btn--svg,
 
 .vds-btn-menu--secondary:hover,
 .vds-btn-menu--secondary-state--hover {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
   border-color: var(--color-light-blue, #0051dc);
   color: var(--color-light-blue, #0051dc);
 }
 
 .vds-btn-menu--secondary:focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active),
 .vds-btn-menu--secondary-state--focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active) {
-  background-color: var(--color-ice, #57587d);
+  background-color: var(--color-ice, #e0eafa);
   border-color: var(--color-light-blue, #0051dc);
   color: var(--color-light-blue, #0051dc);
   outline: 1px dashed var(--color-night, #15195a);
@@ -958,3 +964,5 @@ html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--svg:last-child {
   margin-left: 0;
   margin-right: 4px;
 }
+
+@import './checkbox.css';
