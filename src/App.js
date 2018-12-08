@@ -18,19 +18,103 @@ class App extends Component {
           </button>
           <section hidden><Icons /></section>
           <section>
+            <h2>Radio</h2>
+            <section className="radio-container">
+              <input className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-1" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-1">Alabama</label>
+              <br />
+              <input className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-2" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-2">Alaska</label>
+              <br />
+              <input defaultChecked className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-3" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-3">Arizona</label>
+              <br />
+              <input disabled className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-4" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-4">Arkansas</label>
+              <br />
+              <input disabled className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-5" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-5">California</label>
+              <br />
+              <input className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-6" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-6">Colorado</label>
+              <br />
+              <input aria-label="Connecticut" className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-7" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-7" />
+              <br />
+              <input ref={elem => elem && (elem.indeterminate = true)} className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-8" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-8">Delaware</label>
+              <br />
+              <input ref={elem => elem && (elem.indeterminate = true)} disabled className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-9" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-9">Florida</label>
+              <br />
+              <input ref={elem => elem && (elem.setCustomValidity('Invalid'))} className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-10" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-10">Georgia</label>
+              <br />
+              <input ref={elem => elem && (elem.indeterminate = true) && (elem.setCustomValidity('Invalid'))} className="visa-ui-radio" type="radio" name="example-radio" id="radio-test-11" />
+              <label className="visa-ui-radio-label" htmlFor="radio-test-11">Hawaii</label>
+              <br />
+            </section>
+            <div className="visa-ui-radio--error">
+              <Icon name="error" resolution="low" />
+              <span>Error Message</span>
+            </div>
+          </section>
+          <section>
+            <h2>Checkbox</h2>
+            <section className="checkbox-container">
+              <input className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-1" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-1">Alabama</label>
+              <br />
+              <input className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-2" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-2">Alaska</label>
+              <br />
+              <input defaultChecked className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-3" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-3">Arizona</label>
+              <br />
+              <input disabled className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-4" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-4">Arkansas</label>
+              <br />
+              <input disabled defaultChecked className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-5" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-5">California</label>
+              <br />
+              <input className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-6" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-6">Colorado</label>
+              <br />
+              <input aria-label="Connecticut" className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-7" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-7" />
+              <br />
+              <input ref={elem => elem && (elem.indeterminate = true)} className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-8" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-8">Delaware</label>
+              <br />
+              <input ref={elem => elem && (elem.indeterminate = true)} disabled className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-9" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-9">Florida</label>
+              <br />
+              <input ref={elem => elem && (elem.setCustomValidity('Invalid'))} className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-10" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-10">Georgia</label>
+              <br />
+              <input ref={elem => elem && (elem.indeterminate = true) && (elem.setCustomValidity('Invalid'))} className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-11" />
+              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-11">Hawaii</label>
+              <br />
+            </section>
+            <div className="visa-ui-checkbox--error">
+              <Icon name="error" resolution="low" />
+              <span>Error Message</span>
+            </div>
+          </section>
+          <section>
             <h2>Text</h2>
             <button className="vds-btn-text--primary">Primary</button>
-            <button disabled className="vds-btn-text--primary">Primary Disabled</button>
+            <button disabled className="vds-btn-text--primary">Primary</button>
             <button className="vds-btn-text--secondary">Secondary</button>
-            <button disabled className="vds-btn-text--secondary">Secondary Disabled</button>
+            <button disabled className="vds-btn-text--secondary">Secondary</button>
             <button className="vds-btn-text--tertiary">Tertiary</button>
-            <button disabled className="vds-btn-text--tertiary">Tertiary Disabled</button>
+            <button disabled className="vds-btn-text--tertiary">Tertiary</button>
             <button className={`vds-btn-text--primary vds-btn--fullwidth`}>Full Width Primary</button>
             <button className={`vds-btn-text--secondary vds-btn--fullwidth`}>Full Width Secondary</button>
             <button className={`vds-btn-text--tertiary vds-btn--fullwidth`}>Full Width Tertiary</button>
-            <button disabled className={`vds-btn-text--primary vds-btn--fullwidth`}>Full Width Primary Disabled</button>
-            <button disabled className={`vds-btn-text--secondary vds-btn--fullwidth`}>Full Width Secondary Disabled</button>
-            <button disabled className={`vds-btn-text--tertiary vds-btn--fullwidth`}>Full Width Tertiary Disabled</button>
+            <button disabled className={`vds-btn-text--primary vds-btn--fullwidth`}>Full Width Primary</button>
+            <button disabled className={`vds-btn-text--secondary vds-btn--fullwidth`}>Full Width Secondary</button>
+            <button disabled className={`vds-btn-text--tertiary vds-btn--fullwidth`}>Full Width Tertiary</button>
           </section>
           <section>
             <h2>Menu</h2>
@@ -39,7 +123,7 @@ class App extends Component {
               <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
             </button>
             <button disabled className="vds-btn-menu--primary">
-              <span className="vds-btn--label">Menu Primary Disabled</span>
+              <span className="vds-btn--label">Menu Primary</span>
               <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
             </button>
             <button className="vds-btn-menu--secondary">
@@ -47,7 +131,7 @@ class App extends Component {
               <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
             </button>
             <button disabled className="vds-btn-menu--secondary">
-              <span className="vds-btn--label">Menu Secondary Disabled</span>
+              <span className="vds-btn--label">Menu Secondary</span>
               <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
             </button>
           </section>
@@ -55,96 +139,96 @@ class App extends Component {
             <h2>Text with Icon</h2>
             <button className={`vds-btn-text--primary`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" role="img" />
-              <span className="vds-btn--label">Primary</span>
+              <span className="vds-btn--label">Icon Primary</span>
             </button>
             <button className={`vds-btn-text--secondary`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Secondary</span>
+              <span className="vds-btn--label">Icon Secondary</span>
             </button>
             <button className={`vds-btn-text--tertiary`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Tertiary</span>
+              <span className="vds-btn--label">Icon Tertiary</span>
             </button>
             <button disabled className={`vds-btn-text--primary`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Primary Disabled</span>
+              <span className="vds-btn--label">Icon Primary</span>
             </button>
             <button disabled className={`vds-btn-text--secondary`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Secondary Disabled</span>
+              <span className="vds-btn--label">Icon Secondary</span>
             </button>
             <button disabled className={`vds-btn-text--tertiary`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Tertiary Disabled</span>
+              <span className="vds-btn--label">Icon Tertiary</span>
             </button>
             <button className={`vds-btn-text--primary vds-btn--fullwidth`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Primary Full Width</span>
+              <span className="vds-btn--label">Icon Primary Full Width</span>
             </button>
             <button className={`vds-btn-text--secondary vds-btn--fullwidth`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Secondary Full Width</span>
+              <span className="vds-btn--label">Icon Secondary Full Width</span>
             </button>
             <button className={`vds-btn-text--tertiary vds-btn--fullwidth`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Tertiary Full Width</span>
+              <span className="vds-btn--label">Icon Tertiary Full Width</span>
             </button>
             <button disabled className={`vds-btn-text--primary vds-btn--fullwidth`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Primary Full Width Disabled</span>
+              <span className="vds-btn--label">Icon Primary Full Width</span>
             </button>
             <button disabled className={`vds-btn-text--secondary vds-btn--fullwidth`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Secondary Full Width Disabled</span>
+              <span className="vds-btn--label">Icon Secondary Full Width</span>
             </button>
             <button disabled className={`vds-btn-text--tertiary vds-btn--fullwidth`}>
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
-              <span className="vds-btn--label">Tertiary Full Width Disabled</span>
+              <span className="vds-btn--label">Icon Tertiary Full Width</span>
             </button>
           </section>
           <section className="dark-background">
             <h2>Icon Dark Outline</h2>
-            <button className="vds-btn-icon--dark--outline">
+            <button aria-label="Icon Dark" className="vds-btn-icon--dark--outline">
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
             </button>
-            <button disabled className="vds-btn-icon--dark--outline">
+            <button aria-label="Icon Dark" disabled className="vds-btn-icon--dark--outline">
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
             </button>
             <h2>Icon Dark Tiny</h2>
-            <button className="vds-btn-icon--dark--tiny">
+            <button aria-label="Icon Dark Tiny" className="vds-btn-icon--dark--tiny">
               <Icon name="close" className="vds-btn--svg" resolution="tiny" />
             </button>
-            <button disabled className="vds-btn-icon--dark--tiny">
+            <button aria-label="Icon Dark Tiny" disabled className="vds-btn-icon--dark--tiny">
               <Icon name="close" className="vds-btn--svg" resolution="tiny" />
             </button>
           </section>
           <section>
             <h2>Icon Light</h2>
-            <button className="vds-btn-icon--light">
+            <button aria-label="Icon Light" className="vds-btn-icon--light">
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
             </button>
-            <button disabled className="vds-btn-icon--light">
+            <button aria-label="Icon Light" disabled className="vds-btn-icon--light">
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
             </button>
             <h2>Icon Light Outline</h2>
-            <button className="vds-btn-icon--light--outline">
+            <button aria-label="Icon Light Outline" className="vds-btn-icon--light--outline">
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
             </button>
-            <button disabled className="vds-btn-icon--light--outline">
+            <button aria-label="Icon Light Outline" disabled className="vds-btn-icon--light--outline">
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
             </button>
             <h2>Icon Light Fill</h2>
-            <button className="vds-btn-icon--light--fill">
+            <button aria-label="Icon Light Fill" className="vds-btn-icon--light--fill">
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
             </button>
-            <button disabled className="vds-btn-icon--light--fill">
+            <button aria-label="Icon Light Fill" disabled className="vds-btn-icon--light--fill">
               <Icon className="vds-btn--svg" name="scan-qr" resolution="low" />
             </button>
             <h2>Icon Light Tiny</h2>
-            <button className="vds-btn-icon--light--tiny">
+            <button aria-label="Icon Light Tiny" className="vds-btn-icon--light--tiny">
               <Icon name="close" className="vds-btn--svg" resolution="tiny" />
             </button>
-            <button disabled className="vds-btn-icon--light--tiny" type="button">
+            <button aria-label="Icon Light Tiny" disabled className="vds-btn-icon--light--tiny" type="button">
               <Icon name="close" className="vds-btn--svg" resolution="tiny" />
             </button>
           </section>
@@ -355,48 +439,6 @@ class App extends Component {
               <span className="vds-btn--label">Default</span>
               <Icon name="dropdown" className="vds-btn--svg" resolution="tiny" />
             </button>
-          </section>
-          <section>
-            <h2>Checkbox</h2>
-            <section className="checkbox-container">
-              <input className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-1" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-1">First Option</label>
-              <br />
-              <input className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-2" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-2">Second Option</label>
-              <br />
-              <input defaultChecked className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-3" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-3">Third Option</label>
-              <br />
-              <input disabled className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-4" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-4">Fourth option</label>
-              <br />
-              <input disabled checked className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-5" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-5">Fifth option</label>
-              <br />
-              <input className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-6" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-6">Sixth option</label>
-              <br />
-              <input className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-7" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-7" />
-              <br />
-              <input ref={elem => elem && (elem.indeterminate = true)} className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-8" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-8">Indeterminate</label>
-              <br />
-              <input ref={elem => elem && (elem.indeterminate = true)} disabled className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-8" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-8">Indeterminate Disabled</label>
-              <br />
-              <input ref={elem => elem && (elem.setCustomValidity('Invalid'))} className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-9" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-9">Invalid</label>
-              <br />
-              <input ref={elem => elem && (elem.indeterminate = true) && (elem.setCustomValidity('Invalid'))} className="visa-ui-checkbox" type="checkbox" name="example" id="checkbox-test-10" />
-              <label className="visa-ui-checkbox-label" htmlFor="checkbox-test-10">Invalid Indeterminate</label>
-              <br />
-            </section>
-            <div className="visa-ui-checkbox--error">
-              <Icon name="error" resolution="low" />
-              <span>Error Message</span>
-            </div>
           </section>
         </section>
       </ThemeProvider>

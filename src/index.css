@@ -76,7 +76,7 @@ h2 {
   appearance: none;
   background-color: var(--color-blue, #003ea9);
   border-radius: 2px;
-  border: 0;
+  border: 2px solid var(--color-blue, #003ea9);
   box-sizing: border-box;
   color: var(--color-white, #ffffff);
   cursor: pointer;
@@ -92,6 +92,7 @@ h2 {
   min-width: 64px;
   outline: 0;
   padding: 0 16px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   transition: background .25s ease;
@@ -107,13 +108,35 @@ h2 {
 .vds-btn-text--primary:hover,
 .vds-btn-text--primary-state--hover {
   background-color: var(--color-light-blue, #0051dc);
+  border-color: var(--color-light-blue, #0051dc);
 }
 
 .vds-btn-text--primary:focus:not(:disabled):not(:active):not(.vds-btn-text--primary-state--disabled):not(.vds-btn-text--primary-state--active),
 .vds-btn-text--primary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--primary-state--disabled):not(.vds-btn-text--primary-state--active) {
   background-color: var(--color-light-blue, #0051dc);
-  outline: 1px dashed var(--color-night, #15195a);
-  text-decoration: underline;
+  border: 2px solid #0051dc;
+  /*outline: 1px dashed var(--color-night, #15195a);*/
+  /*text-decoration: underline;*/
+}
+
+.vds-btn-text--primary:focus:not(:disabled):not(:active):not(.vds-btn-text--primary-state--disabled):not(.vds-btn-text--primary-state--active)::after,
+.vds-btn-text--primary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--primary-state--disabled):not(.vds-btn-text--primary-state--active)::after,
+.vds-btn-text--secondary:focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active)::after,
+.vds-btn-text--secondary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active)::after,
+.vds-btn-menu--primary:focus:not(:disabled):not(:active):not(.vds-btn-menu--primary-state--disabled):not(.vds-btn-menu--primary-state--active)::after,
+.vds-btn-menu--primary-state--focus:not(:disabled):not(:active):not(.vds-btn-menu--primary-state--disabled):not(.vds-btn-menu--primary-state--active)::after,
+.vds-btn-menu--secondary:focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active)::after,
+.vds-btn-menu--secondary-state--focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active)::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  position: absolute;
+  border: 1px dashed #15195a;
+  box-sizing: content-box;
+  top: -5px;
+  left: -5px;
 }
 
 .vds-btn-text--primary:active,
@@ -124,6 +147,7 @@ h2 {
 .vds-btn-text--primary:disabled,
 .vds-btn-text--primary-state--disabled {
   background-color: var(--color-smoke, #d7d7de);
+  border-color: var(--color-smoke, #d7d7de);
   pointer-events: none;
 }
 
@@ -152,6 +176,7 @@ h2 {
   min-width: 64px;
   outline: 0;
   padding: 0 16px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   transition: background .25s ease;
@@ -181,8 +206,8 @@ h2 {
   background-color: var(--color-ice, #e0eafa);
   border-color: var(--color-light-blue, #0051dc);
   color: var(--color-light-blue, #0051dc);
-  outline: 1px dashed var(--color-night, #15195a);
-  text-decoration: underline;
+  /*outline: 1px dashed var(--color-night, #15195a);*/
+  /*text-decoration: underline;*/
 }
 
 .vds-btn-text--secondary:focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active) .vds-btn--svg,
@@ -224,7 +249,7 @@ h2 {
   appearance: none;
   background-color: var(--color-transparent, rgba(0, 0, 0, 0));
   border-radius: 2px;
-  border: 1px dashed var(--color-transparent, rgba(0, 0, 0, 0));
+  border: 1px solid var(--color-blue, #003ea9);
   box-sizing: border-box;
   color: var(--color-light-blue, #0051dc);
   cursor: pointer;
@@ -240,6 +265,7 @@ h2 {
   min-width: 64px;
   outline: 0;
   padding: 0 8px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   transition: background .25s ease;
@@ -255,17 +281,32 @@ h2 {
 .vds-btn-text--tertiary:hover,
 .vds-btn-text--tertiary-state--hover {
   text-decoration: underline;
+  border-color: var(--color-light-blue, #0051dc);
 }
 
 .vds-btn-text--tertiary:focus:not(:disabled):not(:active):not(.vds-btn-text--tertiary-state--disabled):not(.vds-btn-text--tertiary-state--active),
 .vds-btn-text--tertiary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--tertiary-state--disabled):not(.vds-btn-text--tertiary-state--active) {
-  border-color: var(--color-night, #15195a);
-  text-decoration: underline;
+  /*border-color: var(--color-night, #15195a);*/
+  /*text-decoration: underline;*/
+}
+
+.vds-btn-text--tertiary:focus:not(:disabled):not(:active):not(.vds-btn-text--tertiary-state--disabled):not(.vds-btn-text--tertiary-state--active)::after,
+.vds-btn-text--tertiary-state--focus:not(:disabled):not(:active):not(.vds-btn-text--tertiary-state--disabled):not(.vds-btn-text--tertiary-state--active)::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 3px;
+  position: absolute;
+  border: 1px dashed #15195a;
+  box-sizing: content-box;
+  top: -4px;
+  left: -4px;
 }
 
 .vds-btn-text--tertiary:active,
 .vds-btn-text--tertiary-state--active {
-  border-color: var(--color-transparent, rgba(0, 0, 0, 0));
+  /*border-color: var(--color-transparent, rgba(0, 0, 0, 0));*/
 }
 
 .vds-btn-text--tertiary:disabled,
@@ -293,6 +334,37 @@ h2 {
   margin-right: 0;
   min-height: 64px;
   min-width: 100%;
+  position: relative;
+}
+
+.vds-btn-text--primary.vds-btn--fullwidth:focus:not(:disabled):not(:active):not(.vds-btn-text--primary-state--disabled):not(.vds-btn-text--primary-state--active)::after,
+.vds-btn-text--primary-state--focus.vds-btn--fullwidth:not(:disabled):not(:active):not(.vds-btn-text--primary-state--disabled):not(.vds-btn-text--primary-state--active)::after,
+.vds-btn-text--secondary.vds-btn--fullwidth:focus:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active)::after,
+.vds-btn-text--secondary-state--focus.vds-btn--fullwidth:not(:disabled):not(:active):not(.vds-btn-text--secondary-state--disabled):not(.vds-btn-text--secondary-state--active)::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  border: 1px dashed #ffffff;
+  box-sizing: content-box;
+  top: -1px;
+  left: -1px;
+}
+
+.vds-btn-text--tertiary.vds-btn--fullwidth:focus:not(:disabled):not(:active):not(.vds-btn-text--tertiary-state--disabled):not(.vds-btn-text--tertiary-state--active)::after,
+.vds-btn-text--tertiary-state--focus.vds-btn--fullwidth:not(:disabled):not(:active):not(.vds-btn-text--tertiary-state--disabled):not(.vds-btn-text--tertiary-state--active)::after {
+  content: '';
+  display: block;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  padding: 0px;
+  position: absolute;
+  border: 1px dashed #003ea9;
+  box-sizing: content-box;
+  top: 0;
+  left: 0;
 }
 
 /* 
@@ -759,6 +831,7 @@ h2 {
   min-width: 64px;
   outline: 0;
   padding: 0;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   transition: background .25s ease;
@@ -792,8 +865,8 @@ html[dir='rtl'] .vds-btn-menu--primary .vds-btn--svg,
 .vds-btn-menu--primary:focus:not(:disabled):not(:active):not(.vds-btn-menu--primary-state--disabled):not(.vds-btn-menu--primary-state--active),
 .vds-btn-menu--primary-state--focus:not(:disabled):not(:active):not(.vds-btn-menu--primary-state--disabled):not(.vds-btn-menu--primary-state--active) {
   background-color: var(--color-light-blue, #0051dc);
-  outline: 1px dashed var(--color-night, #15195a);
-  text-decoration: underline;
+  /*outline: 1px dashed var(--color-night, #15195a);*/
+  /*text-decoration: underline;*/
 }
 
 .vds-btn-menu--primary:active,
@@ -849,6 +922,7 @@ html[dir='rtl'] .vds-btn-menu--primary:active .vds-btn--svg:last-child,
   min-width: 64px;
   outline: 0;
   padding: 0;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
   transition: background .25s ease;
@@ -886,13 +960,21 @@ html[dir='rtl'] .vds-btn-menu--secondary .vds-btn--svg,
   color: var(--color-light-blue, #0051dc);
 }
 
+.vds-btn-menu--secondary:hover .vds-btn--svg,
+.vds-btn-menu--secondary-state--hover .vds-btn--svg,
+.vds-btn-menu--secondary:focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active) .vds-btn--svg,
+.vds-btn-menu--secondary-state--focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active) .vds-btn--svg {
+  border-color: var(--color-light-blue, #0051dc);
+  fill: var(--color-light-blue, #0051dc);
+}
+
 .vds-btn-menu--secondary:focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active),
 .vds-btn-menu--secondary-state--focus:not(:disabled):not(:active):not(.vds-btn-menu--secondary-state--disabled):not(.vds-btn-menu--secondary-state--active) {
   background-color: var(--color-ice, #e0eafa);
   border-color: var(--color-light-blue, #0051dc);
   color: var(--color-light-blue, #0051dc);
-  outline: 1px dashed var(--color-night, #15195a);
-  text-decoration: underline;
+  /*outline: 1px dashed var(--color-night, #15195a);*/
+  /*text-decoration: underline;*/
 }
 
 .vds-btn-menu--secondary:active,
@@ -966,3 +1048,4 @@ html[dir='rtl'] .vds-btn-text--tertiary .vds-btn--svg:last-child {
 }
 
 @import './checkbox.css';
+@import './radio.css';

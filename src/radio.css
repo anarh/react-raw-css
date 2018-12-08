@@ -1,0 +1,130 @@
+.visa-ui-radio {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+.visa-ui-radio+label.visa-ui-radio-label {
+  background-color: var(--color-transparent, rgba(0, 0, 0, 0));
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.42857rem;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  min-height: 1.42857rem;
+  padding-bottom: .28571rem;
+  padding-left: 40px;
+  padding-right: .28571rem;
+  padding-top: .28571rem;
+  position: relative;
+}
+
+.visa-ui-radio + label.visa-ui-radio-label:empty {
+  padding-bottom: 0;
+  padding-right: 0 !important;
+}
+
+.visa-ui-radio + label.visa-ui-radio-label::before {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box;
+  border-radius: 20px;
+  box-sizing: border-box;
+  content: '';
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: -5px;
+  width: 40px;
+}
+
+.visa-ui-radio:focus+label.visa-ui-radio-label::before {
+  /*background-color: var(--color-ice, #e0eafa);*/
+  /*border: 1px dashed var(--color-night, #15195a);*/
+  background-color: #e0eafa;
+  border: 1px dashed #15195a;
+}
+
+.visa-ui-radio+label.visa-ui-radio-label::after {
+ /* background-color: var(--color-white, #ffffff);
+  border: 2px solid var(--color-blue, #003ea9);*/
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  border: 2px solid #003ea9;
+  border-radius: 10px;
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  height: 20px;
+  left: 10px;
+  position: absolute;
+  top: 5px;
+  width: 20px;
+}
+
+.visa-ui-radio:focus+label.visa-ui-radio-label::after {
+  /*border-color: var(--color-light-blue, #0051dc);*/
+  background-color: #ffffff;
+  border-color: #0051dc;
+}
+
+.visa-ui-radio:focus:checked+label.visa-ui-radio-label::after {
+  /*background-color: var(--color-light-blue, #0051dc);*/
+  background-color: #0051dc;
+}
+
+.visa-ui-radio:checked+label.visa-ui-radio-label::after {
+  /*background-color: var(--color-blue, #003ea9);*/
+  background-color: #003ea9;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.visa-ui-radio:active+label.visa-ui-radio-label::before {
+  /*background-color: var(--color-ice, #e0eafa);
+  border-color: var(--color-transparent, rgba(0, 0, 0, 0));*/
+  background-color: #e0eafa;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.visa-ui-radio:disabled+label.visa-ui-radio-label {
+  /*color: var(--color-cloudy, #b4b4c6);*/
+  color: #b4b4c6;
+  pointer-events: none;
+}
+
+.visa-ui-radio:disabled+label.visa-ui-radio-label::after {
+  /*border-color: var(--color-cloudy, #b4b4c6);*/
+  border-color: #b4b4c6;
+}
+
+.visa-ui-radio:invalid:not(:disabled) +label.visa-ui-radio-label::after {
+  border-color: #d50000;
+}
+
+.visa-ui-radio:invalid:checked:not(:disabled) +label.visa-ui-radio-label::after {
+  background-color: #d50000;
+}
+
+.visa-ui-radio:checked:disabled+label.visa-ui-radio-label::after {
+  /*background-color: var(--color-cloudy, #b4b4c6);*/
+  background-color: #b4b4c6;
+}
+
+
+.visa-ui-radio--error {
+  align-items: center;
+  display: inline-flex;
+  color: #d50000;
+  fill: #d50000;
+}
+
+.visa-ui-radio--error svg{
+  height: 16px;
+  margin: 0 4px;
+  width: 16px;
+}
